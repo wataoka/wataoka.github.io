@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card-columns">
+{% for work_data in work_list %}
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename=work_data['image']) }}" alt="homepage">
+        <div class="card-body">
+          <h4 class="card-title">{{ work_data['name'] }}</h4>
+          <a href="{{ url_for('work', work_name=work_data['name']) }}" class="btn btn-info">詳細</a>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
