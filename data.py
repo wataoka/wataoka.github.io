@@ -47,7 +47,15 @@ work_list = [
         "description": "ほぼ任意の歌手に似た歌詞を生成してくれるAI。複数歌手を入力すると歌手通しの足し合わせもしてくれる。モデルはLSTMを使用している。",
         "qiita": "",
         "github": "https://github.com/wataoka/kashi"
-    }]
+    },
+    {
+        "name": "Todo API",
+        "image": "images/todo.png",
+        "description": "フロントエンドとバックエンドを切り分けたアプリを練習したかったので作りました。",
+        "qiita": "https://qiita.com/wataoka/items/98e2ca53091b629ec165#-indexhtml",
+        "github": "https://github.com/wataoka/todo-api"
+    },
+    ]
 
 def get_work_data(work_name):
     for work in work_list:
