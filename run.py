@@ -1,4 +1,4 @@
-from data import get_work_data , get_work_list
+from data import get_work , get_all_works
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -9,15 +9,13 @@ def home():
 
 @app.route('/portfolio.html')
 def portfolio():
-    work_list = get_work_list()
-    return render_template('/portfolio.html', work_list=work_list)
+    all_works = get_all_works()
+    return render_template('/portfolio.html', all_works=all_works)
 
 @app.route('/work/<work_name>.html')
 def work(work_name):
-
-    work_data = get_work_data(work_name)
-
-    return render_template('/portfolio/work.html', work_data=work_data)
+    work = get_work(work_name)
+    return render_template('/portfolio/work.html', work=work)
 
 @app.route('/career.html')
 def career():
