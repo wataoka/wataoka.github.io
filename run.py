@@ -21,6 +21,10 @@ def work(work_name):
 def career():
     return render_template('/career.html')
 
+@app.route('/resume.html')
+def resume():
+    return render_template('/resume.html')
+
 @app.route('/contact.html')
 def contact():
     return render_template('/contact.html')
