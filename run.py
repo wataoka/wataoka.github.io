@@ -21,13 +21,20 @@ def work(work_name):
 def career():
     return render_template('/career.html')
 
-@app.route('/resume.html')
-def resume():
-    return render_template('/resume.html')
+
+@app.route('/paper.html')
+def paper():
+    return render_template('/paper.html')
+
 
 @app.route('/contact.html')
 def contact():
     return render_template('/contact.html')
+
+
+@app.route('/resume.html')
+def resume():
+    return render_template('/resume.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

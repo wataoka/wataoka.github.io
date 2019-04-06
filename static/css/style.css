@@ -1,4 +1,9 @@
+html {
+  height: 100%;
+}
+
 body{
+  height: 100%;
   background-color: #f6f6f6; 
 }
 
@@ -105,4 +110,8 @@ body{
 
 .career-card {
   margin-top: 20px;
+}
+
+.paper-container {
+  height: 80%;
 }
