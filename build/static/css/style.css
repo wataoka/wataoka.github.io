@@ -4,7 +4,13 @@ html {
 
 body{
   height: 100%;
+  font-size: 1.4rem;
   background-color: #f6f6f6; 
+}
+
+.bd-navbar {
+  font-size: 1.2rem;
+  min-height: 6rem;
 }
 
 .home-icon {
