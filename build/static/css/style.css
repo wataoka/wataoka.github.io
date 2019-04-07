@@ -2,45 +2,63 @@ html {
   height: 100%;
 }
 
-body{
-  height: 100%;
-  font-size: 1.4rem;
-  background-color: #f6f6f6; 
+.navbar {
+  padding-left: 2rem;
 }
 
-.bd-navbar {
-  font-size: 1.2rem;
-  min-height: 6rem;
+/* iPhone */
+@media screen and (min-width: 480px) {
+  .navbar-brand {
+    font-size: 3rem;
+  }
+  .bd-navbar {
+    font-size: 2.1rem;
+    min-height: 10rem;
+  }
 }
 
-.home-icon {
-    width: 200px;
-    border-radius: 100px;
-    display: block;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+@media screen and (min-width: 1024px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .bd-navbar {
+    font-size: 1.2rem;
+    min-height: 5rem;
+  }
 }
 
-.intro{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin-top: 100px;
+.navbar-toggler {
+  width: 5rem;
+  height: 5rem;
+  outline-color: #ffffff;
 }
+
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
-.hello {
-  width: 200px;
-  font-weight: 600;
-  font-size: 40px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .hello {
+    width: 500px;
+    font-weight: 600;
+    font-size: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hello {
+    width: 200px;
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .hello-text {
@@ -54,6 +72,46 @@ body{
   position: absolute;
   width: 440px;
   opacity: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .home-icon {
+      width: 30vw;
+      border-radius: 100vw;
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home-icon {
+      width: 200px;
+      border-radius: 100vw;
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .intro{
+      font-size: 3.5vw;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro{
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+  }
 }
 
 .letter {
@@ -119,5 +177,9 @@ body{
 }
 
 .paper-container {
-  height: 80%;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  height: 85vh;
 }
