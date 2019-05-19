@@ -1,0 +1,181 @@
+/* -------------------- Variables -------------------- */
+/* iPhone */
+/* iPad */
+/* iPhone X */
+/* -------------------- Base -------------------- */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+html {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  body {
+    font-size: 2.0rem;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  body {
+    font-size: 2.0rem;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  body {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  body {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+  body {
+    font-size: 2.4rem;
+  }
+}
+
+/* -------------------- Navigation Bar -------------------- */
+.navbar {
+  padding-left: 2rem;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+}
+
+.bd-navbar {
+  font-size: 2.1rem;
+  min-height: 10rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .bd-navbar {
+    font-size: 1.2rem;
+    min-height: 5rem;
+  }
+}
+.navbar-toggler {
+  width: 5rem;
+  height: 5rem;
+  outline-color: #ffffff;
+}
+
+/* -------------------- Home.html -------------------- */
+.home-icon {
+  width: 30vw;
+  border-radius: 100vw;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------- Loves Animation -------------------- */
+.loves {
+  font-weight: 600;
+  display: block;
+  margin-top: 5rem;
+}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .loves {
+    font-size: 3.0rem;
+    margin-left: 3.5rem;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .loves {
+    font-size: 3.4rem;
+    margin-left: 5.0rem;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .loves {
+    font-size: 4.0rem;
+    margin-left: 5.3rem;
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .loves {
+    font-size: 4.8rem;
+    margin-left: 17.5rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .loves {
+    font-size: 5.4rem;
+    margin-left: 27.5rem;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+  .loves {
+    font-size: 3.4rem;
+    margin-left: 5.0rem;
+  }
+}
+
+.loves-text {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  width: 440px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #16a085;
+}
+
+.brown {
+  color: #845823;
+}
+
+/*# sourceMappingURL=main.css.map */
