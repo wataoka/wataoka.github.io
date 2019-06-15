@@ -66,4 +66,11 @@ work08 = Work(id=8,
              qiita="https://qiita.com/wataoka/items/98e2ca53091b629ec165#-indexhtml",
              github="https://github.com/wataoka/todo-api")
 
+work09 = Work(id=9,
+             name="make10",
+             image="make10.png",
+             description="計算パズルゲーム。4つの数字と四則演算と括弧を使って10を作るゲームで、10問解くまでのタイムを競います。開発ではバックエンドを担当しました。フレームワークはDjangoです。",
+             date="2019年5月18日",
+             github="https://github.com/rokuyon/make10_project/")
+
 all_works = [work01, work02, work03, work04, work05, work06, work07, work08]
