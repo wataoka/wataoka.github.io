@@ -1,0 +1,304 @@
+/* -------------------- Variables -------------------- */
+/* iPhone */
+/* iPad */
+/* iPhone X */
+/* -------------------- Base -------------------- */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+html {
+  font-size: 10px; }
+
+body {
+  font-size: 2.0rem; }
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    body {
+      font-size: 2.0rem; } }
+  @media screen and (min-width: 321px) and (max-width: 375px) {
+    body {
+      font-size: 2.0rem; } }
+  @media screen and (min-width: 376px) and (max-width: 414px) {
+    body {
+      font-size: 2.4rem; } }
+  @media screen and (min-width: 415px) and (max-width: 768px) {
+    body {
+      font-size: 2.4rem; } }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+      font-size: 2.4rem; } }
+  @media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+    body {
+      font-size: 2.4rem; } }
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  h1 {
+    font-size: 2.0rem; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  h1 {
+    font-size: 2.0rem; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  h1 {
+    font-size: 2.4rem; } }
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 4.0rem; } }
+@media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+  h1 {
+    font-size: 2.4rem; } }
+
+table td {
+  word-break: break-all; }
+
+.container {
+  width: 90%;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.gray-back {
+  background-color: #f6f6f6;
+  overflow: hidden; }
+
+/* -------------------- Navigation Bar -------------------- */
+.navbar {
+  padding-left: 2rem; }
+
+.navbar-brand {
+  font-size: 3.0rem; }
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    .navbar-brand {
+      font-size: 2.0rem; } }
+  @media screen and (min-width: 321px) and (max-width: 375px) {
+    .navbar-brand {
+      font-size: 2.0rem; } }
+  @media screen and (min-width: 376px) and (max-width: 414px) {
+    .navbar-brand {
+      font-size: 2.4rem; } }
+  @media screen and (min-width: 415px) and (max-width: 768px) {
+    .navbar-brand {
+      font-size: 2.4rem; } }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .navbar-brand {
+      font-size: 3.0rem; } }
+  @media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+    .navbar-brand {
+      font-size: 2.4rem; } }
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .bd-navbar {
+    min-height: 7rem; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .bd-navbar {
+    min-height: 10rem; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .bd-navbar {
+    min-height: 10rem; } }
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .bd-navbar {
+    min-height: 10rem; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .bd-navbar {
+    min-height: 10rem; } }
+@media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+  .bd-navbar {
+    min-height: 10rem; } }
+
+.navbar-toggler {
+  width: 5rem;
+  height: 5rem;
+  outline-color: #ffffff; }
+
+/* -------------------- Home.html -------------------- */
+.intro {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.icon {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto; }
+  .icon .icon-img {
+    width: 10vw;
+    border-radius: 100vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (min-width: 0px) and (max-width: 1025px) {
+      .icon .icon-img {
+        width: 30vw;
+        border-radius: 100vw;
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px; } }
+
+/* -------------------- Portfolio.html -------------------- */
+.card-columns {
+  width: 95%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .card-columns .card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem; }
+    @media screen and (min-width: 0px) and (max-width: 320px) {
+      .card-columns .card {
+        width: 30rem;
+        margin-bottom: 2rem; } }
+    @media screen and (min-width: 321px) and (max-width: 375px) {
+      .card-columns .card {
+        width: 30rem;
+        margin-bottom: 2rem; } }
+    @media screen and (min-width: 376px) and (max-width: 414px) {
+      .card-columns .card {
+        width: 30rem;
+        margin-bottom: 2rem; } }
+    @media screen and (min-width: 415px) and (max-width: 768px) {
+      .card-columns .card {
+        width: 24rem;
+        margin-bottom: 3rem; } }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .card-columns .card {
+        width: 30rem;
+        margin-bottom: 5rem; } }
+    @media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+      .card-columns .card {
+        width: 30rem;
+        margin-bottom: 2rem; } }
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    .card-columns .card-button {
+      font-size: 2.0rem; } }
+  @media screen and (min-width: 321px) and (max-width: 375px) {
+    .card-columns .card-button {
+      font-size: 2.0rem; } }
+  @media screen and (min-width: 376px) and (max-width: 414px) {
+    .card-columns .card-button {
+      font-size: 2.0rem; } }
+  @media screen and (min-width: 415px) and (max-width: 768px) {
+    .card-columns .card-button {
+      font-size: 1.8rem; } }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .card-columns .card-button {
+      font-size: 1.8rem; } }
+  @media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+    .card-columns .card-button {
+      font-size: 2.0rem; } }
+
+/* -------------------- Career.html -------------------- */
+.career-card {
+  margin-top: 20px; }
+
+/* -------------------- paper.html -------------------- */
+.paper-container {
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  height: 85vh; }
+
+/* -------------------- paper.html -------------------- */
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .work-image {
+    width: 25rem; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .work-image {
+    width: 25rem; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .work-image {
+    width: 25rem; } }
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .work-image {
+    width: 50rem; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .work-image {
+    width: 50rem; } }
+@media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+  .work-image {
+    width: 25rem; } }
+
+/* -------------------- Loves Animation -------------------- */
+.loves {
+  width: 30%;
+  font-size: 3rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    .loves {
+      font-size: 3.0rem;
+      margin-left: 3.5rem; } }
+  @media screen and (min-width: 321px) and (max-width: 375px) {
+    .loves {
+      font-size: 3.4rem;
+      margin-left: 5.0rem; } }
+  @media screen and (min-width: 376px) and (max-width: 414px) {
+    .loves {
+      font-size: 4.0rem;
+      margin-left: 5.3rem; } }
+  @media screen and (min-width: 415px) and (max-width: 768px) {
+    .loves {
+      font-size: 4.8rem;
+      margin-left: 17.5rem; } }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .loves {
+      font-size: 5.4rem;
+      margin-left: 27.5rem; } }
+  @media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+    .loves {
+      font-size: 3.4rem;
+      margin-left: 5.0rem; } }
+
+.loves-text {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0; }
+
+.word {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  width: 440px;
+  opacity: 0; }
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px; }
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.letter.behind {
+  transform: rotateX(-90deg); }
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+.wisteria {
+  color: #8e44ad; }
+
+.belize {
+  color: #2980b9; }
+
+.pomegranate {
+  color: #c0392b; }
+
+.green {
+  color: #16a085; }
+
+.brown {
+  color: #845823; }
+
+/*# sourceMappingURL=main.css.map */
