@@ -73,4 +73,4 @@ work09 = Work(id=9,
              date="2019年5月18日",
              github="https://github.com/rokuyon/make10_project/")
 
-all_works = [work01, work02, work03, work04, work05, work06, work07, work08]
+all_works = [work01, work02, work03, work04, work05, work06, work07, work08, work09]
