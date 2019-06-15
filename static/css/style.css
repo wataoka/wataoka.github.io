@@ -2,43 +2,6 @@ html {
   height: 100%;
 }
 
-/* iPhone */
-@media screen and (min-width: 480px) {
-  body {
-    font-size: 3.3vw;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body{
-    font-size: 1rem;
-  }
-}
-
-.navbar {
-  padding-left: 2rem;
-}
-
-/* iPhone */
-@media screen and (min-width: 480px) {
-  .navbar-brand {
-    font-size: 3rem;
-  }
-  .bd-navbar {
-    font-size: 2.1rem;
-    min-height: 10rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-  .bd-navbar {
-    font-size: 1.2rem;
-    min-height: 5rem;
-  }
-}
 
 .navbar-toggler {
   width: 5rem;
@@ -169,11 +132,6 @@ html {
   color: #845823;
 }
 
-.card-columns .card {
-  margin-top: 1.0rem;
-  margin-left: .5rem;
-  margin-right: .5rem;
-}
 
 .container {
   width: 90%;
@@ -183,16 +141,4 @@ html {
   margin-left: auto;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.career-card {
-  margin-top: 20px;
-}
-
-.paper-container {
-  margin-top: 2vh;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90vw;
-  height: 85vh;
 }
