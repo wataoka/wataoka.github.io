@@ -215,6 +215,22 @@ table td {
 .career-card {
   margin-top: 20px; }
 
+.star {
+  color: yellow; }
+
+/* -------------------- Skill.html -------------------- */
+.skill-card {
+  margin-top: 20px; }
+
+.bg-lang {
+  background-color: #2b97de; }
+
+.bg-ml {
+  background-color: #ff9336; }
+
+.bg-web {
+  background-color: #16a085; }
+
 /* -------------------- paper.html -------------------- */
 .paper-container {
   margin-top: 2vh;

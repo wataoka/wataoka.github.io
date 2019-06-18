@@ -21,6 +21,10 @@ def work(work_name):
 def career():
     return render_template('/career.html')
 
+@app.route('/skill.html')
+def skill():
+    return render_template('/skill.html')
+
 
 @app.route('/paper.html')
 def paper():
