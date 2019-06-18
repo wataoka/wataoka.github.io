@@ -12,7 +12,7 @@ def get_all_works():
 
 work01 = Work(id=1,
              name="ホームページ",
-             image="banner.jpg",
+             image="hp.png",
              description="このサイトのことです。flaskの静的サイトジェネレータのfrozen flaskと言うライブラリを使用しました。",
              date="2019年3月15日")
 
