@@ -284,7 +284,7 @@ table td {
     background-color: #16a085;
 }
 
-/* -------------------- paper.html -------------------- */
+/* -------------------- Paper.html -------------------- */
 .paper-container {
   margin-top: 2vh;
   margin-left: auto;
@@ -293,8 +293,11 @@ table td {
   height: 85vh;
 }
 
-/* -------------------- paper.html -------------------- */
+/* -------------------- Work.html -------------------- */
 .work-image {
+
+    width: 35rem;
+
     @media screen and (min-width: 0px) and (max-width: $iphone5se-width) {
         width: 25rem;
     }
@@ -305,10 +308,10 @@ table td {
         width: 25rem;
     }
     @media screen and (min-width: $iphone678p-width+1px) and (max-width: $ipad-width) {
-        width: 50rem;
+        width: 30rem;
     }
     @media screen and (min-width: $ipad-width+1px) and (max-width: $ipadpro-width) {
-        width: 50rem;
+        width: 30rem;
     }
     @media screen and (min-width: $iphonex-width) and (max-width: $iphonex-width) and (min-height: $iphonex-height) and (max-height: $iphonex-height) {
         width: 25rem;

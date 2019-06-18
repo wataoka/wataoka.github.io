@@ -231,7 +231,7 @@ table td {
 .bg-web {
   background-color: #16a085; }
 
-/* -------------------- paper.html -------------------- */
+/* -------------------- Paper.html -------------------- */
 .paper-container {
   margin-top: 2vh;
   margin-left: auto;
@@ -239,25 +239,27 @@ table td {
   width: 90vw;
   height: 85vh; }
 
-/* -------------------- paper.html -------------------- */
-@media screen and (min-width: 0px) and (max-width: 320px) {
-  .work-image {
-    width: 25rem; } }
-@media screen and (min-width: 321px) and (max-width: 375px) {
-  .work-image {
-    width: 25rem; } }
-@media screen and (min-width: 376px) and (max-width: 414px) {
-  .work-image {
-    width: 25rem; } }
-@media screen and (min-width: 415px) and (max-width: 768px) {
-  .work-image {
-    width: 50rem; } }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .work-image {
-    width: 50rem; } }
-@media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
-  .work-image {
-    width: 25rem; } }
+/* -------------------- Work.html -------------------- */
+.work-image {
+  width: 35rem; }
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    .work-image {
+      width: 25rem; } }
+  @media screen and (min-width: 321px) and (max-width: 375px) {
+    .work-image {
+      width: 25rem; } }
+  @media screen and (min-width: 376px) and (max-width: 414px) {
+    .work-image {
+      width: 25rem; } }
+  @media screen and (min-width: 415px) and (max-width: 768px) {
+    .work-image {
+      width: 30rem; } }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .work-image {
+      width: 30rem; } }
+  @media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
+    .work-image {
+      width: 25rem; } }
 
 /* -------------------- Loves Animation -------------------- */
 .loves {
