@@ -3,13 +3,15 @@
 <div class="gray-back">
     <div class="card-columns">
     {% for work in all_works %}
-        <div class="card">
+    <div class="card-wrap">
+        <div class="card p-1">
             <img class="card-img-top" src="{{ url_for('static', filename=work.image) }}" alt="homepage">
             <div class="card-body">
               <div class="card-title">{{ work.name }}</div>
               <a href="{{ url_for('work', work_name=work.name) }}" class="btn btn-primary card-button">詳細</a>
             </div>
         </div>
+    </div>
     {% endfor %}
     </div>
 </div>
