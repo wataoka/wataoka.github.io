@@ -2,7 +2,7 @@ from .data_manager import Dataset
 
 class Work:
 
-    def __init__(self, name, image="", description="", date="", qiita="", github=""):
+    def __init__(self, name:str, image:str="", description:str="", date:str="", qiita:str="", github:str=""):
         self.name = name
         self.image = "images/" + image
         self.description = description
