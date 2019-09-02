@@ -1,6 +1,6 @@
 from data.work import works_dataset
+from data.career import careers_dataset
 from flask import Flask, render_template
-
 
 app = Flask(__name__)
 
@@ -20,7 +20,8 @@ def work(work_id):
 
 @app.route('/career.html')
 def career():
-    return render_template('/career.html')
+    careers_dict = careers_dataset.get_data_dict() 
+    return render_template('/career.html', careers_dict=careers_dict)
 
 @app.route('/skill.html')
 def skill():
