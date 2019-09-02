@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container">
-    <h1>{{ work['name'] }}</h1>
+    <h1>{{ work.name }}</h1>
     <hr>
     <img src="{{ url_for('static', filename=work.image) }}" alt="{{ work.name }}" class="work-image">
 

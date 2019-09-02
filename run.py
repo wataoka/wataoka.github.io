@@ -1,5 +1,6 @@
-from data import get_work , get_all_works
+from data.work import works_dataset
 from flask import Flask, render_template
+
 
 app = Flask(__name__)
 
@@ -9,12 +10,12 @@ def home():
 
 @app.route('/portfolio.html')
 def portfolio():
-    all_works = get_all_works()
-    return render_template('/portfolio.html', all_works=all_works)
+    works_dict = works_dataset.get_data_dict()
+    return render_template('/portfolio.html', works_dict=works_dict)
 
-@app.route('/work/<work_name>.html')
-def work(work_name):
-    work = get_work(work_name)
+@app.route('/work/<work_id>.html')
+def work(work_id):
+    work = works_dataset.get_data(work_id)
     return render_template('/portfolio/work.html', work=work)
 
 @app.route('/career.html')
