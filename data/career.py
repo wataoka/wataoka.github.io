@@ -7,9 +7,15 @@ class Career:
 
 careers_dataset = Dataset()
 careers_dataset.set_data_list([
+
+    Career(date="2012年4月",
+           text="近畿大学附属高校 特進一類 入学"),
     
     Career(date="2015年3月",
            text="近畿大学附属高校 特進一類 卒業"),
+
+    Career(date="2015年4月",
+           text="大阪市立大学 工学部 電気情報工学科 入学"),
 
     Career(date="2015年10月",
            text="アプリ開発団体ADOCUS 設立"),
@@ -24,7 +30,7 @@ careers_dataset.set_data_list([
            text="神戸大学大学院 システム情報学研究科 入学"),
     
     Career(date="2019年8月",
-           text="Cookpadインターン"),
+           text="クックパッドインターン"),
     
     Career(date="2019年9月",
            text="チームラボインターン"),
