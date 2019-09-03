@@ -1,4 +1,5 @@
 from data.work import works_dataset
+from data.skill import skills_dataset
 from data.career import careers_dataset
 from flask import Flask, render_template
 
@@ -25,7 +26,25 @@ def career():
 
 @app.route('/skill.html')
 def skill():
-    return render_template('/skill.html')
+    language_dict = {}
+    framework_dict = {}
+    machine_learning_dict = {}
+    other_dict = {}
+    skills_dict = skills_dataset.get_data_dict()
+    for id, skill in skills_dict.items():
+        if skill.label == "language":
+            language_dict[id] = skill
+        elif skill.label == "framework":
+            framework_dict[id] = skill
+        elif skill.label == "machine_learning":
+            machine_learning_dict[id] = skill
+        elif skill.label == "other":
+            other_dict[id] = skill
+        else:
+            print(skill.label + "は無効なラベルです。")
+            exit(1)
+
+    return render_template('/skill.html', language_dict=language_dict, framework_dict=framework_dict, machine_learning_dict=machine_learning_dict, other_dict=other_dict)
 
 
 @app.route('/paper.html')
