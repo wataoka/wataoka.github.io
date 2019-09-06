@@ -146,9 +146,9 @@ skills_dataset.set_data_list([
           text="何度も必要にかられ使用してきていますので基本的なシステムや使用方法は理解していますが、若干苦手意識があります。dockerベースのCI/CD環境を自分で作れと言われればキツイです。"),
 
     Skill(label="other",
-          title="SQL",
+          title="データベース",
           stars=4,
-          text="MySQL, SQLite, PostgreSQL, DynamoDB, MongoDBを使用したことがあります。ISUCONに出場したことがありますので最適化の知識もありますが、胸を張って得意だとは言えません。"),
+          text="MySQL, SQLite, PostgreSQL, DynamoDB, MongoDBを使用したことがあります。ISUCONに出場したことがあり、最適化の知識もありますが、胸を張って得意だとは言えません。"),
 
     Skill(label="other",
           title="英語",
