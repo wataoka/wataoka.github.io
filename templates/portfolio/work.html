@@ -24,8 +24,11 @@
             <tr>
                 <th>リンク</th>
                 <td>
+                    {% if work.site %}
+                        <a href="{{ work.site }}">公開サイト</a>, 
+                    {% endif %}
                     {% if work.qiita %}
-                        <a href="{{ work.qiita }}"><i class="fas fa-blog fa-2x"></i></a>
+                        <a href="{{ work.qiita }}">Qiita</a>,
                     {% endif %}
                     {% if work.github %}
                         <a href="{{ work.github }}"><i class="fab fa-github fa-2x"></i></a>

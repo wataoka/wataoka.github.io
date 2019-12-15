@@ -1,13 +1,14 @@
 from .data_manager import Dataset
 
 class Work:
-    def __init__(self, name:str, image:str="", description:str="", date:str="", qiita:str="", github:str=""):
+    def __init__(self, name:str, image:str="", description:str="", date:str="", qiita:str="", github:str="", site:str=""):
         self.name = name
         self.image = "images/" + image
         self.description = description
         self.date = date
         self.qiita = qiita
         self.github = github
+        self.site = site
 
 # Dataset
 works_dataset = Dataset()
@@ -16,7 +17,9 @@ works_dataset.set_data_list([
     Work(name="ホームページ",
          image="hp.png",
          description="このサイトのことです。flaskの静的サイトジェネレータのfrozen flaskと言うライブラリを使用しました。",
-         date="2019年3月15日"),
+         date="2019年3月15日",
+         github="https://github.com/wataoka/wataoka.github.io",
+         site="https://wataoka.info"),
     
     Work(name="GUIで設計できるAI",
          image="guiai01.png",
@@ -46,7 +49,8 @@ works_dataset.set_data_list([
          description="任意の台風が過去の台風の中でどれほどの強さを持っているのかを偏差値で出力してくれるエンジン。Wikipediaにある過去20年間の台風のデータをスクレイピングしている。スクレイピングの練習目的で制作した。",
          date="2018年9月4日",
          qiita="https://qiita.com/wataoka/items/61613f1ab259025cdb2b",
-         github="https://github.com/wataoka/typhoon"),
+         github="https://github.com/wataoka/typhoon",
+         site="https://typhoon-deviation.herokuapp.com/"),
     
     Work(name="歌詞生成AI",
          image="kashi.png",
@@ -66,5 +70,10 @@ works_dataset.set_data_list([
          description="計算パズルゲーム。4つの数字と四則演算と括弧を使って10を作るゲームで、10問解くまでのタイムを競います。開発ではバックエンドを担当しました。フレームワークはDjangoです。",
          date="2019年5月18日",
          github="https://github.com/rokuyon/make10_project/"),
-
+    
+    Work(name="人間選別",
+         image="human-selection.jpeg",
+         description="入力されたあなたの情報からあなたが未来に犯罪を犯すかをAIが予測します。というアプリ。実際にSVM(機械学習モデル)を用いて, データセットから学習を行い, その学習済みモデルを使用して予測させています.",
+         date="2019年10月23日",
+         site="https://human-selection.herokuapp.com/")
     ])
