@@ -38,4 +38,7 @@ careers_dataset.set_data_list([
     Career(date="2021年3月",
            text="神戸大学大学院 システム情報学研究科 卒業予定"),
 
+    Career(date="2021年4月",
+           text="LINE株式会社 入社予定"),
+
 ])
