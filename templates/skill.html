@@ -4,8 +4,8 @@
 
     <h1>言語スキル</h1>
     {% for id, skill in language_dict.items() %}
-    <div class="card skill-card text-white bg-lang mb-3">
-        <div class="card-header">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
+    <div class="card skill-card text-white mb-3">
+        <div class="card-header bg-lang">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
         <div class="card-body">
             <p class="card-text">
                 {{ skill.text }}
@@ -18,8 +18,8 @@
     <br>
     <h1>Webフレームワーク</h1>
     {% for id, skill in framework_dict.items() %}
-    <div class="card skill-card text-white bg-web mb-3">
-        <div class="card-header">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
+    <div class="card skill-card text-white mb-3">
+        <div class="card-header bg-web">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
         <div class="card-body">
             <p class="card-text">
                 {{ skill.text }}
@@ -31,8 +31,8 @@
     <br>
     <h1>機械学習フレームワーク</h1>
     {% for id, skill in machine_learning_dict.items() %}
-    <div class="card skill-card text-white bg-ml mb-3">
-        <div class="card-header">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
+    <div class="card skill-card text-white mb-3">
+        <div class="card-header bg-ml">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
         <div class="card-body">
             <p class="card-text">
                 {{ skill.text }}
@@ -45,8 +45,8 @@
     <br>
     <h1>その他</h1>
     {% for id, skill in other_dict.items() %}
-    <div class="card skill-card text-white bg-secondary mb-3">
-        <div class="card-header">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
+    <div class="card skill-card text-white mb-3">
+        <div class="card-header bg-secondary">{{ skill.title }} <span class="star">{{ "★"*skill.stars }}</span></div>
         <div class="card-body">
             <p class="card-text">
                 {{ skill.text }}

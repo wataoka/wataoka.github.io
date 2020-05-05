@@ -263,15 +263,14 @@ table td {
 /* -------------------- Skill.html -------------------- */
 .skill-card {
   margin-top: 20px; }
-
-.bg-lang {
-  background-color: #2b97de; }
-
-.bg-ml {
-  background-color: #ff9336; }
-
-.bg-web {
-  background-color: #16a085; }
+  .skill-card .bg-lang {
+    background-color: #2b97de; }
+  .skill-card .bg-ml {
+    background-color: #ff9336; }
+  .skill-card .bg-web {
+    background-color: #16a085; }
+  .skill-card .card-body {
+    color: #212529; }
 
 /* -------------------- Paper.html -------------------- */
 .paper-container {
