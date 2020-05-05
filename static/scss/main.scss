@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 h1 {
@@ -228,7 +228,7 @@ table td {
         margin-left: auto;
         margin-right: auto;
     
-        @media screen and (min-width: 0px) and(max-width: $ipadpro-width+1) {
+        @media screen and (min-width: 0px) and(max-width: $iphone678p-width+1) {
             width: 30vw;
             border-radius: 100vw;
             display: block;

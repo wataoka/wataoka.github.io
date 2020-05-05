@@ -9,7 +9,7 @@ html {
   font-size: 10px; }
 
 body {
-  font-size: 1.6rem; }
+  font-size: 1.8rem; }
 
 @media screen and (min-width: 0px) and (max-width: 320px) {
   h1 {
@@ -188,7 +188,7 @@ table td {
     display: block;
     margin-left: auto;
     margin-right: auto; }
-    @media screen and (min-width: 0px) and (max-width: 1025px) {
+    @media screen and (min-width: 0px) and (max-width: 415px) {
       .icon .icon-img {
         width: 30vw;
         border-radius: 100vw;
