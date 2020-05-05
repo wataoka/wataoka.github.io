@@ -250,24 +250,8 @@ table td {
         .card-columns .card-wrap .card {
           width: 30rem;
           margin-bottom: 2rem; } }
-  @media screen and (min-width: 0px) and (max-width: 320px) {
-    .card-columns .card-button {
-      font-size: 2.0rem; } }
-  @media screen and (min-width: 321px) and (max-width: 375px) {
-    .card-columns .card-button {
-      font-size: 2.0rem; } }
-  @media screen and (min-width: 376px) and (max-width: 414px) {
-    .card-columns .card-button {
-      font-size: 2.0rem; } }
-  @media screen and (min-width: 415px) and (max-width: 768px) {
-    .card-columns .card-button {
-      font-size: 1.8rem; } }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .card-columns .card-button {
-      font-size: 1.8rem; } }
-  @media screen and (min-width: 375px) and (max-width: 375px) and (min-height: 812px) and (max-height: 812px) {
-    .card-columns .card-button {
-      font-size: 2.0rem; } }
+  .card-columns .card-button {
+    font-size: 1.8rem; }
 
 /* -------------------- Career.html -------------------- */
 .career-card {

@@ -303,24 +303,7 @@ table td {
 
 
     .card-button {
-        @media screen and (min-width: 0px) and (max-width: $iphone5se-width) {
-            font-size: 2.0rem;
-        }
-        @media screen and (min-width: $iphone5se-width+1px) and (max-width: $iphone678-width) {
-            font-size: 2.0rem;
-        }
-        @media screen and (min-width: $iphone678-width+1px) and (max-width: $iphone678p-width) {
-            font-size: 2.0rem;
-        }
-        @media screen and (min-width: $iphone678p-width+1px) and (max-width: $ipad-width) {
-            font-size: 1.8rem;
-        }
-        @media screen and (min-width: $ipad-width+1px) and (max-width: $ipadpro-width) {
-            font-size: 1.8rem;
-        }
-        @media screen and (min-width: $iphonex-width) and (max-width: $iphonex-width) and (min-height: $iphonex-height) and (max-height: $iphonex-height) {
-            font-size: 2.0rem;
-        }
+        font-size: 1.8rem;
     }
 }
 
