@@ -1,31 +1,32 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="container">
-    <div class="loves">
-      <div class="loves-wrap">
-          <div class="loves-text">Wataoka</div>
-          <div class="loves-text">Loves</div>
-          <br>
-          <div class="loves-text">
-            <span class="word wisteria">Math.</span>
-            <span class="word belize">AI.</span>
-            <span class="word pomegranate">python.</span>
-            <span class="word green">Simple.</span>
-            <span class="word brown">Cat.</span>
+<div class="home-wrapper">
+    <div class="container">
+        <div class="loves">
+          <div class="loves-wrap">
+              <div class="loves-text">Wataoka</div>
+              <div class="loves-text">Loves</div>
+              <br>
+              <div class="loves-text">
+                <span class="word wisteria">Math.</span>
+                <span class="word belize">AI.</span>
+                <span class="word pomegranate">python.</span>
+                <span class="word green">Simple.</span>
+                <span class="word brown">Cat.</span>
+              </div>
           </div>
-      </div>
-    </div>
+        </div>
+        
+        <div class="icon">
+            <img src="{{ url_for('static', filename='images/me01.jpg') }}" alt="wataoka" class="icon-img">
+        </div>
     
-    <div class="icon">
-        <img src="{{ url_for('static', filename='images/me01.jpg') }}" alt="wataoka" class="icon-img">
-    </div>
-
-    <br><br>
-    
-    <div class="intro">
-        こんにちは、綿岡 晃輝(わたおか こうき)と申します。<br>機械学習を専門とする大学院生です。
+        <br><br>
+        
+        <div class="intro">
+            こんにちは、綿岡 晃輝(わたおか こうき)と申します。<br>機械学習を専門とする大学院生です。
+        </div>
     </div>
 </div>
-
 {% endblock %}

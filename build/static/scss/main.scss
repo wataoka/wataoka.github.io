@@ -20,6 +20,8 @@ $iphonex-height: 812px;
 /* -------------------- Base -------------------- */
 html {
     font-size: 10px;
+    width: 100%;
+    overflow-x: hidden !important;
 }
 
 body {
@@ -152,7 +154,7 @@ table td {
 
 /* -------------------- Navigation Bar -------------------- */
 .navbar {
-  padding-left: 2rem;
+    padding-left: 2rem;
 }
 
 .navbar-brand {
@@ -206,38 +208,40 @@ table td {
   outline-color: #ffffff;
 }
 
+
 /* -------------------- Home.html -------------------- */
-.intro {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.icon {
-
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-
-    .icon-img {
-
-        width: 18vw;
-        border-radius: 100vw;
+.home-wrapper {
+    .intro {
+        text-align: center;
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
     
-        @media screen and (min-width: 0px) and(max-width: $iphone678p-width+1) {
-            width: 30vw;
+    .icon {
+    
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    
+        .icon-img {
+    
+            width: 18vw;
             border-radius: 100vw;
             display: block;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        
+            @media screen and (min-width: 0px) and(max-width: $iphone678p-width+1) {
+                width: 30vw;
+                border-radius: 100vw;
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
         }
     }
 }
-
 
 /* -------------------- Portfolio.html -------------------- */
 .card-columns {

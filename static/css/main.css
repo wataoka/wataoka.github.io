@@ -6,7 +6,9 @@
 /* -------------------- Base -------------------- */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  width: 100%;
+  overflow-x: hidden !important; }
 
 body {
   font-size: 1.8rem; }
@@ -172,24 +174,23 @@ table td {
   outline-color: #ffffff; }
 
 /* -------------------- Home.html -------------------- */
-.intro {
+.home-wrapper .intro {
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto; }
-
-.icon {
+.home-wrapper .icon {
   max-width: 50%;
   margin-left: auto;
   margin-right: auto; }
-  .icon .icon-img {
+  .home-wrapper .icon .icon-img {
     width: 18vw;
     border-radius: 100vw;
     display: block;
     margin-left: auto;
     margin-right: auto; }
     @media screen and (min-width: 0px) and (max-width: 415px) {
-      .icon .icon-img {
+      .home-wrapper .icon .icon-img {
         width: 30vw;
         border-radius: 100vw;
         display: block;
