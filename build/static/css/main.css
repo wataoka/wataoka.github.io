@@ -6,9 +6,7 @@
 /* -------------------- Base -------------------- */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 html {
-  font-size: 10px;
-  width: 100%;
-  overflow-x: hidden !important; }
+  font-size: 10px; }
 
 body {
   font-size: 1.8rem; }
@@ -336,16 +334,16 @@ table td {
     display: inline-block;
     margin-left: auto;
     margin-right: auto; }
-
-.loves-text {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0; }
+    .loves .loves-wrap .loves-text {
+      width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0; }
 
 .word {
   font-family: 'Open Sans', sans-serif;
   position: absolute;
-  width: 440px;
+  width: 50%;
   opacity: 0; }
 
 .letter {

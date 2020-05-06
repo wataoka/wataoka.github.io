@@ -20,8 +20,6 @@ $iphonex-height: 812px;
 /* -------------------- Base -------------------- */
 html {
     font-size: 10px;
-    width: 100%;
-    overflow-x: hidden !important;
 }
 
 body {
@@ -410,20 +408,22 @@ table td {
         display: inline-block;
         margin-left: auto;
         margin-right: auto;
+
+        .loves-text {
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+        }
     }
 
 }
 
-.loves-text {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-}
 
 .word {
   font-family: 'Open Sans', sans-serif;
   position: absolute;
-  width: 440px;
+  width: 50%;
   opacity: 0;
 }
 .letter {
