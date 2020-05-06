@@ -208,35 +208,32 @@ table td {
 
 
 /* -------------------- Home.html -------------------- */
-.home-wrapper {
-    .intro {
-        text-align: center;
+.intro {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .icon-img {
+
+        width: 18vw;
+        border-radius: 100vw;
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
     
-    .icon {
-    
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    
-        .icon-img {
-    
-            width: 18vw;
+        @media screen and (min-width: 0px) and(max-width: $iphone678p-width+1) {
+            width: 30vw;
             border-radius: 100vw;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-        
-            @media screen and (min-width: 0px) and(max-width: $iphone678p-width+1) {
-                width: 30vw;
-                border-radius: 100vw;
-                display: block;
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
     }
 }
@@ -385,7 +382,7 @@ table td {
     margin-right: auto;
 
     @media screen and (min-width: 0px) and (max-width: $iphone5se-width) {
-        font-size: 3.0rem;
+        font-size: 3.4rem;
     }
     @media screen and (min-width: $iphone5se-width+1px) and (max-width: $iphone678-width) {
         font-size: 3.4rem;
@@ -394,13 +391,13 @@ table td {
         font-size: 4.0rem;
     }
     @media screen and (min-width: $iphone678p-width+1px) and (max-width: $ipad-width) {
-        font-size: 4.2rem;
+        font-size: 4.0rem;
     }
     @media screen and (min-width: $ipad-width+1px) and (max-width: $ipadpro-width) {
-        font-size: 4.8rem;
+        font-size: 4.0rem;
     }
-    @media screen and (min-width: $iphonex-width) and (max-width: $iphonex-width) and (min-height: $iphonex-height) and (max-height: $iphonex-height) {
-        font-size: 3.4rem;
+    @media screen and (min-width: $ipadpro-width+1px) {
+        font-size: 4.0rem;
     }
 
     .loves-wrap {
@@ -410,60 +407,60 @@ table td {
         margin-right: auto;
 
         .loves-text {
-            width: 100%;
+            width: 15rem;
             display: inline-block;
             vertical-align: top;
             margin: 0;
+            margin-right: 2rem;
+                .word {
+                  font-family: 'Open Sans', sans-serif;
+                  position: absolute;
+                  width: 15rem;
+                  opacity: 0;
+                }
+                .letter {
+                    display: inline-block;
+                    position: relative;
+                    float: left;
+                    transform: translateZ(25px);
+                    transform-origin: 50% 50% 25px;
+                  }
+                  
+                  .letter.out {
+                    transform: rotateX(90deg);
+                    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                  }
+                  
+                  .letter.behind {
+                    transform: rotateX(-90deg);
+                  }
+                  
+                  .letter.in {
+                    transform: rotateX(0deg);
+                    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                  }
+                  
+                  .wisteria {
+                    color: #8e44ad;
+                  }
+                  
+                  .belize {
+                    color: #2980b9;
+                  }
+                  
+                  .pomegranate {
+                    color: #c0392b;
+                  }
+                  
+                  .green {
+                    color: #16a085;
+                  }
+                  
+                  .brown {
+                    color: #845823;
+                  }
         }
     }
 
 }
 
-
-.word {
-  font-family: 'Open Sans', sans-serif;
-  position: absolute;
-  width: 50%;
-  opacity: 0;
-}
-.letter {
-    display: inline-block;
-    position: relative;
-    float: left;
-    transform: translateZ(25px);
-    transform-origin: 50% 50% 25px;
-  }
-  
-  .letter.out {
-    transform: rotateX(90deg);
-    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  
-  .letter.behind {
-    transform: rotateX(-90deg);
-  }
-  
-  .letter.in {
-    transform: rotateX(0deg);
-    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .wisteria {
-    color: #8e44ad;
-  }
-  
-  .belize {
-    color: #2980b9;
-  }
-  
-  .pomegranate {
-    color: #c0392b;
-  }
-  
-  .green {
-    color: #16a085;
-  }
-  
-  .brown {
-    color: #845823;
-  }
