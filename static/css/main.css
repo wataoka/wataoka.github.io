@@ -172,23 +172,24 @@ table td {
   outline-color: #ffffff; }
 
 /* -------------------- Home.html -------------------- */
-.home-wrapper .intro {
+.intro {
   text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto; }
-.home-wrapper .icon {
+
+.icon {
   max-width: 50%;
   margin-left: auto;
   margin-right: auto; }
-  .home-wrapper .icon .icon-img {
+  .icon .icon-img {
     width: 18vw;
     border-radius: 100vw;
     display: block;
     margin-left: auto;
     margin-right: auto; }
     @media screen and (min-width: 0px) and (max-width: 415px) {
-      .home-wrapper .icon .icon-img {
+      .icon .icon-img {
         width: 30vw;
         border-radius: 100vw;
         display: block;

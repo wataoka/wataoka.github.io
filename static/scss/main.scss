@@ -208,35 +208,32 @@ table td {
 
 
 /* -------------------- Home.html -------------------- */
-.home-wrapper {
-    .intro {
-        text-align: center;
+.intro {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .icon-img {
+
+        width: 18vw;
+        border-radius: 100vw;
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
     
-    .icon {
-    
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    
-        .icon-img {
-    
-            width: 18vw;
+        @media screen and (min-width: 0px) and(max-width: $iphone678p-width+1) {
+            width: 30vw;
             border-radius: 100vw;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-        
-            @media screen and (min-width: 0px) and(max-width: $iphone678p-width+1) {
-                width: 30vw;
-                border-radius: 100vw;
-                display: block;
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
     }
 }
