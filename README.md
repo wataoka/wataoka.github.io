@@ -1,5 +1,5 @@
-# Wataoka's Portfolio
-This repository is Wataoka's Portfolio.
+# Wataoka's HomePage
+This repository is Wataoka's HomePage.
 
 ## Page URL:
 wataoka.info
