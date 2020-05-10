@@ -2,10 +2,10 @@
 {% block content %}
 <div class="container">
     <h1>経歴</h1>
-    {% for id, career in careers_dict.items() %}
+    {% for career in careers_list %}
     <div class="card career-card">
-        <div class="card-header">{{ careers_dict[id].date }}</div>
-        <div class="card-body">{{ careers_dict[id].text }}</div>
+        <div class="card-header">{{ career.date }}</div>
+        <div class="card-body">{{ career.text }}</div>
     </div>
     {% endfor %}
 </div>

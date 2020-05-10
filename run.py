@@ -3,11 +3,11 @@ import json
 import argparse
 
 from data.skill import skills_dataset
-from data.career import careers_dataset
 from flask import Flask, render_template, url_for
 
 app = Flask(__name__, static_url_path='/static')
 works_json_path = os.path.join(app.static_folder, 'json/works.json')
+careers_json_path = os.path.join(app.static_folder, 'json/careers.json')
 
 @app.route('/')
 def home():
@@ -28,8 +28,9 @@ def work(work_id):
 
 @app.route('/career.html')
 def career():
-    careers_dict = careers_dataset.get_data_dict() 
-    return render_template('/career.html', careers_dict=careers_dict)
+    with open(careers_json_path) as careers_json_file:
+        careers_list = json.load(careers_json_file) 
+    return render_template('/career.html', careers_list=careers_list)
 
 @app.route('/skill.html')
 def skill():
