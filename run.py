@@ -1,3 +1,5 @@
+import argparse
+
 from data.work import works_dataset
 from data.skill import skills_dataset
 from data.career import careers_dataset
@@ -61,5 +63,13 @@ def contact():
 def resume():
     return render_template('/resume.html')
 
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--debug', type=str, default='False')
+    args = parser.parse_args()
+    args.debug = (args.debug == 'True')
+    return args
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    args = parse_args()
+    app.run(debug=args.debug)
