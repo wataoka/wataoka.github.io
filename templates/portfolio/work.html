@@ -3,7 +3,7 @@
 <div class="container">
     <h1>{{ work.name }}</h1>
     <hr>
-    <img src="{{ url_for('static', filename=work.image) }}" alt="{{ work.name }}" class="work-image">
+    <img src="{{ url_for('static', filename='images/'+work.image) }}" alt="{{ work.name }}" class="work-image">
 
     <br><br>
 

@@ -1,11 +1,12 @@
+import os
+import json
 import argparse
 
-from data.work import works_dataset
 from data.skill import skills_dataset
 from data.career import careers_dataset
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def home():
@@ -13,12 +14,17 @@ def home():
 
 @app.route('/portfolio.html')
 def portfolio():
-    works_dict = works_dataset.get_data_dict()
-    return render_template('/portfolio.html', works_dict=works_dict)
+    json_path = os.path.join(app.static_folder, 'json/works.json')
+    with open(json_path) as json_file:
+        works_list = json.load(json_file)
+    return render_template('/portfolio.html', works_list=works_list)
 
 @app.route('/work/<work_id>.html')
 def work(work_id):
-    work = works_dataset.get_data(work_id)
+    json_path = os.path.join(app.static_folder, 'json/works.json')
+    with open(json_path) as json_file:
+        works_list = json.load(json_file)
+    work = works_list[int(work_id)]
     return render_template('/portfolio/work.html', work=work)
 
 @app.route('/career.html')
