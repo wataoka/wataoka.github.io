@@ -7,6 +7,7 @@ from data.career import careers_dataset
 from flask import Flask, render_template, url_for
 
 app = Flask(__name__, static_url_path='/static')
+works_json_path = os.path.join(app.static_folder, 'json/works.json')
 
 @app.route('/')
 def home():
@@ -14,16 +15,14 @@ def home():
 
 @app.route('/portfolio.html')
 def portfolio():
-    json_path = os.path.join(app.static_folder, 'json/works.json')
-    with open(json_path) as json_file:
-        works_list = json.load(json_file)
+    with open(works_json_path) as works_json_file:
+        works_list = json.load(works_json_file)
     return render_template('/portfolio.html', works_list=works_list)
 
 @app.route('/work/<work_id>.html')
 def work(work_id):
-    json_path = os.path.join(app.static_folder, 'json/works.json')
-    with open(json_path) as json_file:
-        works_list = json.load(json_file)
+    with open(works_json_path) as works_json_file:
+        works_list = json.load(works_json_file)
     work = works_list[int(work_id)]
     return render_template('/portfolio/work.html', work=work)
 
