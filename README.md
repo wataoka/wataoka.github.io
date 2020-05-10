@@ -1,10 +1,10 @@
 # Wataoka's Portfolio
 This repository is Wataoka's Portfolio.
 
-Page URL:
+## Page URL:
 wataoka.info
 
-Page List:
+## Page List:
 
 - Home
 - portfolio
@@ -14,3 +14,11 @@ Page List:
 - career
 - paper
 - contact
+
+## Tech Stack
+|tech|name|
+|:--|:--|
+|Hosting| Github Pages|
+|Web Framework|Flask|
+|Static Site Generator|Frozen-Flask|
+|CSS Framework|Bootstrap4|
