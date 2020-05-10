@@ -48,16 +48,13 @@ def skill():
 
     return render_template('/skill.html', language_dict=language_dict, framework_dict=framework_dict, machine_learning_dict=machine_learning_dict, other_dict=other_dict)
 
-
 @app.route('/paper.html')
 def paper():
     return render_template('/paper.html')
 
-
 @app.route('/contact.html')
 def contact():
     return render_template('/contact.html')
-
 
 @app.route('/resume.html')
 def resume():
