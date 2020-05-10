@@ -13,6 +13,7 @@ This repository is Wataoka's HomePage.
   - etc...
 - career
 - paper
+- skill
 - contact
 
 ## Tech Stack
