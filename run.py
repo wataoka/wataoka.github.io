@@ -8,6 +8,7 @@ app = Flask(__name__, static_url_path='/static')
 works_json_path = os.path.join(app.static_folder, 'json/works.json')
 careers_json_path = os.path.join(app.static_folder, 'json/careers.json')
 skills_json_path = os.path.join(app.static_folder, 'json/skills.json')
+studies_json_path = os.path.join(app.static_folder, 'json/studies.json')
 
 @app.route('/')
 def home():
@@ -31,6 +32,12 @@ def career():
     with open(careers_json_path) as careers_json_file:
         careers_list = json.load(careers_json_file) 
     return render_template('/career.html', careers_list=careers_list)
+
+@app.route('/study.html')
+def study():
+    with open(studies_json_path) as studies_json_file:
+        studies_list = json.load(studies_json_file) 
+    return render_template('/study.html', studies_list=studies_list)
 
 @app.route('/skill.html')
 def skill():
