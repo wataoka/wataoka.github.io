@@ -6,3 +6,6 @@ base=".."
 
 # build static file
 python "${base}/freeze.py"
+
+# show page
+open "${base}/build/index.html"
