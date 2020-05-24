@@ -2,12 +2,12 @@ import os
 import json
 import argparse
 
-from data.skill import skills_dataset
 from flask import Flask, render_template, url_for
 
 app = Flask(__name__, static_url_path='/static')
 works_json_path = os.path.join(app.static_folder, 'json/works.json')
 careers_json_path = os.path.join(app.static_folder, 'json/careers.json')
+skills_json_path = os.path.join(app.static_folder, 'json/skills.json')
 
 @app.route('/')
 def home():
@@ -38,15 +38,16 @@ def skill():
     framework_dict = {}
     machine_learning_dict = {}
     other_dict = {}
-    skills_dict = skills_dataset.get_data_dict()
-    for id, skill in skills_dict.items():
-        if skill.label == "language":
+    with open(skills_json_path) as skills_json_file:
+        skills_list = json.load(skills_json_file) 
+    for id, skill in enumerate(skills_list):
+        if skill['label'] == "language":
             language_dict[id] = skill
-        elif skill.label == "framework":
+        elif skill['label'] == "framework":
             framework_dict[id] = skill
-        elif skill.label == "machine_learning":
+        elif skill['label'] == "machine_learning":
             machine_learning_dict[id] = skill
-        elif skill.label == "other":
+        elif skill['label'] == "other":
             other_dict[id] = skill
         else:
             print(skill.label + "は無効なラベルです。")
