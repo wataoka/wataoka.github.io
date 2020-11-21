@@ -7,5 +7,8 @@ base=".."
 # build static file
 python "${base}/freeze.py"
 
+# rename build folder to docs
+mv ${base}/build ${base}/docs
+
 # show page
-open "${base}/build/index.html"
+open "${base}/docs/index.html"
