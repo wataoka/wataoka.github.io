@@ -11,8 +11,8 @@ python "${base}/freeze.py"
 rm -rf ${base}/docs
 mv ${base}/build ${base}/docs
 
-# remove other docs dir
-rm -rf ${base}/docs/static/node_modules/bootstrap-4.1.3/site/docs
+# remove site
+rm -rf ${base}/docs/static/node_modules/bootstrap-4.1.3/site
 
 # show page
 open "${base}/docs/index.html"
