@@ -2,7 +2,7 @@
 This repository is Wataoka's HomePage.
 
 ## Page URL:
-[wataoka.info](wataoka.info)
+[wataoka.github.io](wataoka.github.io)
 
 ## Page List:
 
