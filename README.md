@@ -1,8 +1,5 @@
 # Wataoka's HomePage
-This repository is Wataoka's HomePage.
-
-## Page URL:
-[wataoka.github.io](wataoka.github.io)
+This page is repo for Wataoka's homepage ([wataoka.github.io](wataoka.github.io)).
 
 ## Page List:
 
@@ -25,8 +22,14 @@ This repository is Wataoka's HomePage.
 |CSS Framework|Bootstrap4|
 
 ## script
-I have some shellscripts for easy development. Based on the philosophy of "I am another person in the next few months", I explain them.
 
-- build-static.sh: build static site by freeze.py
-- run-server.sh: run flask server by run.py
-- watch-scss.sh: watch scss file to generate css by sass command
+```bash
+# build static site by frozen-flask
+sh script/build-static.sh
+
+# run flask server
+sh script/run-server.sh
+
+# watch scss file to generate css
+sh script/watch-scss.sh
+```
