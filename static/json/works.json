@@ -58,15 +58,6 @@
     },
     
     {
-        "name":"Todo API",
-        "image":"todo.png",
-        "description":"フロントエンドとバックエンドを切り分けたアプリを練習したかったので作りました。",
-        "date":"2019年3月20日",
-        "qiita":"https://qiita.com/wataoka/items/98e2ca53091b629ec165#-indexhtml",
-        "github":"https://github.com/wataoka/todo-api"
-    },
-
-    {
         "name":"make10",
         "image":"make10.png",
         "description":"計算パズルゲーム。4つの数字と四則演算と括弧を使って10を作るゲームで、10問解くまでのタイムを競います。開発ではバックエンドを担当しました。フレームワークはDjangoです。",
