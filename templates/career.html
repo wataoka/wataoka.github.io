@@ -2,11 +2,21 @@
 {% block content %}
 <div class="container">
     <h1>経歴</h1>
+    <br>
     {% for career in careers_list %}
-    <div class="card career-card">
-        <div class="card-header">{{ career.date }}</div>
-        <div class="card-body">{{ career.text }}</div>
-    </div>
+    <p>
+        {% if career.type == "学歴" %}
+        <span class="badge badge-primary">{{ career.type }} </span>
+        {% elif career.type == "職歴" %}
+        <span class="badge badge-info">{{ career.type }} </span>
+        {% elif career.type == "受賞" %}
+        <span class="badge badge-success">{{ career.type }} </span>
+        {% else %}
+        <span class="badge badge-secondary">{{ career.type }} </span>
+        {% endif %}
+        <span>  </span>
+        {{ career.date }}: {{ career.text }}
+    </p>
     {% endfor %}
 </div>
 {% endblock %}
