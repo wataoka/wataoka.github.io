@@ -74,6 +74,10 @@ def contact():
 def resume():
     return render_template('/resume.html')
 
+@app.route('/answer/test')
+def answer():
+    return 'これはテストアンサーです。'
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--debug', type=str, default='False')
