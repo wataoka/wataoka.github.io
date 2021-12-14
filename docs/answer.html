@@ -22,24 +22,37 @@
         
         <div class="container">
         
-            <h1>チーム対抗Zoomで謎解き大会</h1>
+            <h1>チーム対抗謎解き大会</h1>
             <br>
             回答フォーム<br>
-            <input id="answer-input" type="text">
-            <button class="btn btn-info" onclick="submitAnswer()">回答</button>
+            <input id="answer-input" type="text" style="width: 235px; height: 30px;">
+            <button class="btn btn-success" style="height: 30px; width: 60px; font-size: 14px;" onclick="submitAnswer()">回答</button>
             
             <br>
             <br>
             指示文
             <div class="card" style="width: 300px">
-            <p id="instruction" style="height: 50px"></p>
+            <p id="instruction" style="height: 120px"></p>
             </div>
             
             <script>
             function submitAnswer() {
         
                 var instructions = {
-                    "てすと": "テスト用指示文章です。"
+                    "てすと": "答え合わせの時にできるだけ多くの人がマスクをしろ。(マスクをした人数×0ポイントGET)",
+                    "ちきゅう": "答え合わせの時に一人が頭の上に帽子以外の何かを乗せろ。(乗せていれば3ポイントGET)",
+                    "ゆうぐれ": "答え合わせの時に一人が右肩の上に何かを載せろ。(乗せていれば2ポイントGET)",
+                    "うんどう": "答え合わせの時に一人が左肩の上に何かを載せろ。(乗せていれば2ポイントGET)",
+                    "いちご": "答え合わせの時に一人が右耳の上にペンをかけろ。(かけていれば2ポイントGET)",
+                    "じかん": "答え合わせの時に一人が左耳の上に耳かきをかけろ。(かけていれば3ポイントGET)",
+                    "こうえん": "答え合わせの時にできるだけ多くの人が多くの帽子を被れ。(被った帽子の数×1ポイントGET)",
+                    "うがんだ": "答え合わせの時にできるだけ多くの人がサングラスをかけろ。(かけた人数分×2ポイントGET)",
+                    "なつかぜ": "答え合わせの時にできるだけ多くの人がメガネorサングラスを上下逆にかけろ。(逆にかけた人数×1ポイントGET)",
+                    "なす": "答え合わせの時にできるだけ多くの人がマフラーをしろ。(マフラーをした人数×1ポイントGET)",
+                    "めだか": "答え合わせの時に一人がzoomの名前を「パンダマン」に設定しろ。(設定できれば3ポイントGET)",
+                    "よーぐると": "答え合わせの時に一人がzoomの名前を「天才エンジニア」に設定しろ。(設定できれば3ポイントGET)",
+                    "みんち": "答え合わせの時に全員のzoomの背景を「インドっぽく」しろ。(インドっぽければ5ポイントGET)",
+                    "こたえ": "答え合わせの時に全員のzoomの名前の先頭に星の絵文字「⭐️」をつけろ。(設定できれば10ポイントGET)",
                 };
         
                 var answer = document.getElementById('answer-input').value;
