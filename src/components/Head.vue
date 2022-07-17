@@ -7,7 +7,7 @@
     <div class="w-full text-center">LINE株式会社 Trustworthy AIチーム</div>
     <div class="flex justify-center mt-1">
         <IconLink svg="/github.svg" url="https://github.com/wataoka" />
-        <IconLink svg="/twitter.svg" url="https://twitter.com/wataoka" />
+        <IconLink svg="/twitter.svg" url="https://twitter.com/wataoka_koki" />
         <IconLink svg="/youtube.svg" url="https://www.youtube.com/channel/UClZfnIaWYR_WgrWLVu4muvw" />
     </div>
   </div>
