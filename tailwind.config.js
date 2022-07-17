@@ -5,6 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamiliy: {
+        body: [
+            'ヒラギノ角ゴ StdN',
+            'Hiragino Kaku Gothic StdN',
+            'ヒラギノ角ゴシック',
+            'Hiragino Sans',
+            'ＭＳ ゴシック',
+            'sans-serif'
+        ]
+    },
     listStyleType: {
       none: 'none',
       square: 'square',
