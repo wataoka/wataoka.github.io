@@ -11,6 +11,12 @@ h2 {
     @apply font-bold;
 }
 
+h3 {
+    @apply text-xl;
+    @apply font-bold;
+}
+
+
 body {
     @apply font-normal;
     @apply bg-slate-50;

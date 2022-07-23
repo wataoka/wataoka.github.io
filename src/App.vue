@@ -5,6 +5,7 @@
     <Career />
     <Research />
     <Love />
+    <Post />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Abstract from "./components/Abstract.vue";
 import Career from "./components/Career.vue";
 import Research from "./components/Research.vue";
 import Love from "./components/Love.vue";
+import Post from "./components/Post.vue";
 
 export default {
   name: "App",
@@ -22,7 +24,8 @@ export default {
     Abstract,
     Career,
     Research,
-    Love
+    Love,
+    Post
   },
 };
 </script>
