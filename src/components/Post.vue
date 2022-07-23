@@ -1,7 +1,7 @@
 <template>
   <div class="post mt-10 px-10">
     <h1>Post</h1>
-    <div class="bg-white rounded-md mt-1 px-6 py-6 space-y-4 shadow-md">
+    <div class="mt-1 space-y-6">
         <PostCard
           url="https://engineering.linecorp.com/ja/blog/challenge-the-jigsaw-rate-severity-of-toxic-comments/"
           title="文章有害性評価コンペティションへの挑戦 - LINE Engineering Blog"
