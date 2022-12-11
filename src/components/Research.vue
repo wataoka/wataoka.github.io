@@ -3,6 +3,7 @@
     <h1>Research</h1>
     <div class="bg-white rounded-md mt-1 pl-10 pr-6 py-4 shadow-md">
       <ul class="list-square">
+        <li>綿岡晃輝, 野崎 雄斗, 馬越 雅人, 高橋 翼, "言語モデルの倫理的検査のための効率的なテストケースの生成", Computer Security Symposium (CSS), 2022. <b class="text-red-500">CSS奨励賞</b></li>
         <li>Koki Wataoka, Takashi Matsubara, Kuniaki Uehara, “Counterfactual Image Generation using GAN for Fairness,” 情報処理学会 コンピュータビジョンとイメージメディア研究会(CVIM), vol. 2021-CVIM-225, no. 4, オンライン, 3月, 2021.</li>
         <li>綿岡晃輝, 松原崇, 上原邦昭, “公平性により生じる敵対的攻撃に対する脆弱性,” 2020年度 第34回人工知能学会全国大会(JSAI2020), 熊本, 6月, 2020.</li>
         <li>綿岡晃輝, 松原崇, 上原邦昭, “公平性が引き起こす敵対的攻撃に対する脆弱性,” 電子情報通信学会 情報論的学習理論と機械学習研究会, vol. 119, no. 476, IBISML2019-48, pp .101-105, 京都, 3月, 2020.</li>
