@@ -4,7 +4,7 @@
       <img src="/wataoka2018.jpeg" class="icon drop-shadow-2xl" />
     </div>
     <h2 class="mt-4 w-full text-center">綿岡 晃輝</h2>
-    <div class="w-full text-center">LINE株式会社 Trustworthy AIチーム</div>
+    <div class="w-full text-center">LINE株式会社 Machine Learning Privacy & Trustチーム</div>
     <div class="flex justify-center mt-1">
         <IconLink svg="/github.svg" url="https://github.com/wataoka" />
         <IconLink svg="/twitter.svg" url="https://twitter.com/wataoka_koki" />

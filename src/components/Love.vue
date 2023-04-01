@@ -3,7 +3,7 @@
     <h1>Love</h1>
     <div class="bg-white rounded-md mt-1 px-6 py-4 shadow-md">
         <div class="font-black">Research</div>
-        AI / Trustworthy AI / NLP / 機械学習の公平性 / 因果推論 / 音声処理
+        AI / Trustworthy AI / Privacy / NLP / 機械学習の公平性 / 因果推論 / 音声処理
         <div class="font-black mt-2">Development</div>
         Web開発 / iOSアプリ開発 / デザイン
         <div class="font-black mt-2">Animal</div>

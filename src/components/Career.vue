@@ -8,7 +8,7 @@
         <li> <span class="font-black">2019</span> &nbsp&nbsp クックパッド株式会社 インターン (iOSフロントエンド)</li>
         <li> <span class="font-black">2019</span> &nbsp&nbsp チームラボ株式会社 インターン (Webフロントエンド)</li>
         <li> <span class="font-black">2021</span> &nbsp&nbsp 神戸大学大学院 システム情報工学科 卒業</li>
-        <li> <span class="font-black">2021</span> &nbsp&nbsp LINE株式会社 AI開発室 Trustworthy AIチーム 所属</li>
+        <li> <span class="font-black">2021</span> &nbsp&nbsp LINE株式会社 入社</li>
       </ul>
     </div>
   </div>
