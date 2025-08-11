@@ -1,14 +1,437 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wataoka</title>
-    <script type="module" crossorigin src="/assets/index-DB8RFGjl.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BU-wHvca.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wataoka</title>
+  <meta name="description" content="Koki Wataoka — AI Safety / LLM evaluation. Publications, talks, and contact." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --fg: #e9eef2;
+      --muted: #9aa4ad;
+      --line: #1a1c22;
+      --accent: #84a6ff;
+      --pad: 22px;
+      --max: 860px;
+    }
+    
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --fg: #0b0c0f;
+        --muted: #5c6670;
+        --line: #e9eef2;
+        --accent: #1a4bff;
+      }
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    
+    a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+    }
+    
+    a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: calc(var(--pad) * 1.5) var(--pad) calc(var(--pad) * 0.6) var(--pad);
+    }
+    
+    header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: calc(var(--pad) * 0.5);
+    }
+    
+    h1 {
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    
+    h1 .sub {
+      display: block;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+    
+    nav a {
+      border: 0;
+      opacity: .85;
+    }
+    
+    nav a:hover {
+      opacity: 1;
+    }
+    
+    section {
+      padding: calc(var(--pad) * 0.6) 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    
+    h2 {
+      margin: 0 0 0px 0;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    
+    .lead {
+      color: var(--muted);
+      max-width: 62ch;
+    }
+    
+    .grid {
+      display: grid;
+      gap: 10px;
+    }
+    
+    .pubs {
+      display: grid;
+      gap: 16px;
+    }
+    
+    .pub {
+      display: grid;
+      gap: 0px;
+    }
+    
+    .pub .title {
+      font-weight: 600;
+    }
+    
+    .pub .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    
+    .cats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    @media (min-width: 880px) {
+      .cats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    
+    footer {
+      padding: calc(var(--pad) * 0.6) 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .nowrap {
+      white-space: nowrap;
+    }
+    
+    .profile-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--line);
+    }
+    
+    .award {
+      color: #6b7280;
+      border-bottom-color: #6b7280;
+    }
+    
+    .award:hover {
+      color: #4b5563;
+      border-bottom-color: #4b5563;
+    }
+    
+    .career-timeline {
+      display: grid;
+      gap: 16px;
+    }
+    
+    .career-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    
+    .career-period {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    
+    .career-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    
+    .career-company {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    
+    @media (max-width: 640px) {
+      .wrap {
+        padding: calc(var(--pad) * 1.2) calc(var(--pad) * 0.8) calc(var(--pad) * 0.6) calc(var(--pad) * 0.8);
+      }
+      
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      
+      header > div {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+      }
+      
+      .profile-image {
+        width: 60px;
+        height: 60px;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      h1 .sub {
+        font-size: 0.75rem;
+      }
+      
+      .career-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      
+      .career-period {
+        font-size: 0.85rem;
+      }
+      
+      .pub .meta {
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <img src="wataoka2025.jpg" alt="Koki Wataoka" class="profile-image">
+        <div>
+          <h1>
+            Koki Wataoka
+            <span class="sub">Responsible AI Team, SB Intuitions / Softbank</span>
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="lead">
+        I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs.
+        Previously worked on fairness and privacy‑preserving computation.
+        My recent work studies LLM‑as‑a‑Judge biases (verbosity / self‑preference), jailbreak attacks, and LLM fingerprinting.
+      </p>
+    </section>
+    
+    <section id="career">
+      <h2>Career</h2>
+      <div class="career-timeline">
+        <div class="career-item">
+          <div class="career-period">2023 – Present</div>
+          <div class="career-details">
+            <div class="career-title">Responsible AI Team</div>
+            <div class="career-company">SB Intuitions</div>
+          </div>
+        </div>
+        <div class="career-item">
+          <div class="career-period">2021 – 2023</div>
+          <div class="career-details">
+            <div class="career-title">Trustworthy AI Team</div>
+            <div class="career-company">LINE Corporation</div>
+          </div>
+        </div>
+        <div class="career-item">
+          <div class="career-period">2019 – 2021</div>
+          <div class="career-details">
+            <div class="career-title">MS Student</div>
+            <div class="career-company">Kobe University, Tokyo Institute of Technology</div>
+          </div>
+        </div>
+        <div class="career-item">
+          <div class="career-period">2015 – 2019</div>
+          <div class="career-details">
+            <div class="career-title">Undergraduate Student</div>
+            <div class="career-company">Osaka City University</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="cats">
+        <div>
+          <h3>International (peer‑reviewed)</h3>
+          <div class="pubs">
+            <div class="pub">
+              <div class="title"><a href="https://aclanthology.org/2025.acl-long.342/" target="_blank" rel="noopener">MergePrint: Merge‑Resistant Fingerprints for Robust Black‑box Ownership Verification of LLMs</a></div>
+              <div class="meta">Shojiro Yamabe, Futa Kai Waseda, Tsubasa Takahashi, <u><b>Koki Wataoka</b></u> — ACL 2025 Main</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://arxiv.org/abs/2410.21819" target="_blank" rel="noopener">Self‑Preference Bias in LLM‑as‑a‑Judge</a></div>
+              <div class="meta"><u><b>Koki Wataoka</b></u>, Tsubasa Takahashi, Ryokan Ri — <span class="nowrap">NeurIPS 2024 Safe Generative AI Workshop</span></div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://iclr.cc/virtual/2024/23742" target="_blank" rel="noopener">Initial Response Selection for Prompt Jailbreaking using Model Steering</a></div>
+              <div class="meta">Thien Q Tran, <u><b>Koki Wataoka</b></u>, Tsubasa Takahashi — ICLR 2024 Workshop on Secure & Trustworthy LLMs</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://neurips.cc/virtual/2023/79622" target="_blank" rel="noopener">Verbosity Bias in Preference Labeling by Large Language Models</a></div>
+              <div class="meta">Keita Saito, Akifumi Wachi, <u><b>Koki Wataoka</b></u>, Youhei Akimoto — NeurIPS 2023 Workshop</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Domestic (Japan)</h3>
+          <div class="pubs">
+            <div class="pub">
+              <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/" target="_blank" rel="noopener">事前学習コーパス内の特定の属性への言及の急激な変化の調査</a></div>
+              <div class="meta">大萩雅也, <u><b>綿岡晃輝</b></u>, 高山隼矢, 吉川克正 — 言語処理学会第31回年次大会 (NLP 2025)</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/" target="_blank" rel="noopener">大規模言語モデルのための日本語安全性境界テスト</a></div>
+              <div class="meta">黒澤友哉, 高山隼矢, <u><b>綿岡晃輝</b></u>, 小林滉河, 浅原正幸, 西内沙恵 — 言語処理学会第31回年次大会 (NLP 2025)</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://www.iwsec.org/css/2024/program.html" target="_blank" rel="noopener">大規模言語モデルが有する自己選好バイアスの実態調査</a></div>
+              <div class="meta"><u><b>綿岡晃輝</b></u>, 髙橋翼, 李凌寒 — コンピュータセキュリティシンポジウム (CSS) 2024 論文集, pp.214‑221</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2024/" target="_blank" rel="noopener">Constitutional AIにおけるセーフティアラインメントの改善</a></div>
+              <div class="meta"><u><b>綿岡晃輝</b></u>, Thien Q. Tran, 前田若菜, 髙橋翼 — 言語処理学会第30回年次大会 (NLP 2024)</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2024/" target="_blank" rel="noopener">モデル介入を用いる Jailbreak prompt 攻撃の初期応答の選択手法</a></div>
+              <div class="meta">Thien Q. Tran, <u><b>綿岡晃輝</b></u>, 髙橋翼 — 言語処理学会第30回年次大会 (NLP 2024)</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://www.iwsec.org/css/2023/program.html" target="_blank" rel="noopener">第3世代 Intel Xeon Scalable Processors による大規模 Enclave 領域を用いた Shuffling の検討</a></div>
+              <div class="meta">長谷川聡, <u><b>綿岡晃輝</b></u>, 骻橋翼, 竹之内隆夫 — CSS 2023 論文集, pp.1412‑1419</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://www.iwsec.org/css/2023/program.html" target="_blank" rel="noopener">秘匿クロス集計の大規模化および P2P Remote Attestation の導入に関する一検討</a></div>
+              <div class="meta"><u><b>綿岡晃輝</b></u>, 長谷川聡, 高橋翼, 竹之内隆夫 — CSS 2023 論文集, pp.1405‑1411</div>
+            </div>
+            <div class="pub">
+              <div class="title"><a href="https://www.iwsec.org/css/2022/program.html" target="_blank" rel="noopener">言語モデルの倫理的検査のための効率的なテストケースの生成</a></div>
+              <div class="meta"><u><b>綿岡晃輝</b></u>, 野崎雄斗, 馬越雅人, 高橋翼 — CSS 2022 論文集, pp.1322‑1328 <a href="https://www.iwsec.org/css/2022/award.html" target="_blank" rel="noopener" class="award">[奨励賞]</a> </div>
+            </div>
+            <div class="pub">
+              <div class="title">公平性が引き起こす敵対的攻撃に対する脆弱性</div>
+              <div class="meta"><u><b>綿岡晃輝</b></u>, 松原崇, 上原邦昭 — 電子情報通信学会 技術研究報告 119(476), pp.101‑105, 2020</div>
+            </div>
+            <div class="pub">
+              <div class="title">公平性により生じる敵対的攻撃に対する脆弱性</div>
+              <div class="meta"><u><b>綿岡晃輝</b></u>, 松原崇, 上原邦昭 — 人工知能学会 全国大会 (2020)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="patents">
+      <h2>Patents</h2>
+      <div class="pubs">
+        <div class="pub">
+          <div class="title"><a href="https://www.j-platpat.inpit.go.jp/p0200" target="_blank" rel="noopener">特開2023-121470, プログラム、情報処理方法、情報処理装置</a></div>
+          <div class="meta"><u><b>綿岡晃輝</b></u> — 日本国特許庁 (Japan Patent Office)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Links</h2>
+      <p>Email: <a href="mailto:wataoka.koki@gmail.com">wataoka.koki@gmail.com</a></p>
+      <p class="lead">
+        <a href="https://scholar.google.com/citations?user=J8FuRZgAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
+        <a href="https://github.com/wataoka" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+      </p>
+    </section>
+
+    <footer>
+      <span id="y"></span> Koki Wataoka
+    </footer>
+  </div>
+  
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
