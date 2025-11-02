@@ -192,12 +192,13 @@
     
     .award {
       color: #6b7280;
-      border-bottom-color: #6b7280;
+      color: #f87171;
+      border-bottom-color: #f87171;
     }
     
     .award:hover {
-      color: #4b5563;
-      border-bottom-color: #4b5563;
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
     
     .career-timeline {
@@ -283,15 +284,20 @@
         <div>
           <h1>
             Koki Wataoka
-            <span class="sub">Responsible AI Team, SB Intuitions / Softbank</span>
+            <span class="sub" data-i18n="header-sub">Responsible AI Team, SB Intuitions / Softbank</span>
           </h1>
         </div>
       </div>
+      <nav aria-label="Language">
+        <a href="#" id="lang-en" data-lang="en">EN</a>
+        <span class="nowrap" style="opacity:.5">/</span>
+        <a href="#" id="lang-ja" data-lang="ja">日本語</a>
+      </nav>
     </header>
 
     <section id="about">
-      <h2>About</h2>
-      <p class="lead">
+      <h2 data-i18n="about-title">About</h2>
+      <p class="lead" data-i18n="about-lead" data-i18n-html="true">
         I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs.
         Previously worked on fairness and privacy‑preserving computation.
         My recent work studies LLM‑as‑a‑Judge biases (verbosity / self‑preference), jailbreak attacks, and LLM fingerprinting.
@@ -299,7 +305,7 @@
     </section>
     
     <section id="career">
-      <h2>Career</h2>
+      <h2 data-i18n="career-title">Career</h2>
       <div class="career-timeline">
         <div class="career-item">
           <div class="career-period">2023 – Present</div>
@@ -331,73 +337,88 @@
         </div>
       </div>
     </section>
+
+    <section id="appointments">
+      <h2 data-i18n="appointments-title">Appointments</h2>
+      <div class="pubs">
+        <div class="pub">
+          <div class="title">
+            <a href="https://www.soumu.go.jp/main_sosiki/kenkyu/cybersecurity_taskforce/02cyber01_04000001_00321.html" target="_blank" rel="noopener" data-i18n="appointments-mic">Member, MIC (Japan) AI Security Subcommittee</a>
+          </div>
+        </div>
+      </div>
+    </section>
     
     <section id="publications">
-      <h2>Publications</h2>
+      <h2 data-i18n="pubs-title">Publications</h2>
       <div class="cats">
         <div>
-          <h3>International (peer‑reviewed)</h3>
+          <h3 data-i18n="intl-title">International (peer‑reviewed)</h3>
           <div class="pubs">
             <div class="pub">
+              <div class="title"><a href="https://www.apsipa2025.org/wp/session-2/" target="_blank" rel="noopener"> Foundation Models as Guardrails: LLM- and VLM-Based Approaches to Safety and Alignment</a></div>
+              <div class="meta">Huy Hong Nguyen, Pride Kavumba, Tomoya Kurosawa, <b>Koki Wataoka</b> — APSIPA 2025  <a href="https://www.apsipa2025.org/wp/" target="_blank" rel="noopener" class="award">[Best Perspective Paper]</a>  </div>
+            </div>
+            <div class="pub">
               <div class="title"><a href="https://aclanthology.org/2025.acl-long.342/" target="_blank" rel="noopener">MergePrint: Merge‑Resistant Fingerprints for Robust Black‑box Ownership Verification of LLMs</a></div>
-              <div class="meta">Shojiro Yamabe, Futa Kai Waseda, Tsubasa Takahashi, <u><b>Koki Wataoka</b></u> — ACL 2025 Main</div>
+              <div class="meta">Shojiro Yamabe, Futa Kai Waseda, Tsubasa Takahashi, <b>Koki Wataoka</b> — ACL 2025 Main</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://arxiv.org/abs/2410.21819" target="_blank" rel="noopener">Self‑Preference Bias in LLM‑as‑a‑Judge</a></div>
-              <div class="meta"><u><b>Koki Wataoka</b></u>, Tsubasa Takahashi, Ryokan Ri — <span class="nowrap">NeurIPS 2024 Safe Generative AI Workshop</span></div>
+              <div class="meta"><b>Koki Wataoka</b>, Tsubasa Takahashi, Ryokan Ri — <span class="nowrap">NeurIPS 2024 Safe Generative AI Workshop</span></div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://iclr.cc/virtual/2024/23742" target="_blank" rel="noopener">Initial Response Selection for Prompt Jailbreaking using Model Steering</a></div>
-              <div class="meta">Thien Q Tran, <u><b>Koki Wataoka</b></u>, Tsubasa Takahashi — ICLR 2024 Workshop on Secure & Trustworthy LLMs</div>
+              <div class="meta">Thien Q Tran, <b>Koki Wataoka</b>, Tsubasa Takahashi — ICLR 2024 Workshop on Secure & Trustworthy LLMs</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://neurips.cc/virtual/2023/79622" target="_blank" rel="noopener">Verbosity Bias in Preference Labeling by Large Language Models</a></div>
-              <div class="meta">Keita Saito, Akifumi Wachi, <u><b>Koki Wataoka</b></u>, Youhei Akimoto — NeurIPS 2023 Workshop</div>
+              <div class="meta">Keita Saito, Akifumi Wachi, <b>Koki Wataoka</b>, Youhei Akimoto — NeurIPS 2023 Workshop</div>
             </div>
           </div>
         </div>
         <div>
-          <h3>Domestic (Japan)</h3>
+          <h3 data-i18n="domestic-title">Domestic (Japan)</h3>
           <div class="pubs">
             <div class="pub">
               <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/" target="_blank" rel="noopener">事前学習コーパス内の特定の属性への言及の急激な変化の調査</a></div>
-              <div class="meta">大萩雅也, <u><b>綿岡晃輝</b></u>, 高山隼矢, 吉川克正 — 言語処理学会第31回年次大会 (NLP 2025)</div>
+              <div class="meta">大萩雅也, <b>綿岡晃輝</b>, 高山隼矢, 吉川克正 — 言語処理学会第31回年次大会 (NLP 2025)</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/" target="_blank" rel="noopener">大規模言語モデルのための日本語安全性境界テスト</a></div>
-              <div class="meta">黒澤友哉, 高山隼矢, <u><b>綿岡晃輝</b></u>, 小林滉河, 浅原正幸, 西内沙恵 — 言語処理学会第31回年次大会 (NLP 2025)</div>
+              <div class="meta">黒澤友哉, 高山隼矢, <b>綿岡晃輝</b>, 小林滉河, 浅原正幸, 西内沙恵 — 言語処理学会第31回年次大会 (NLP 2025)</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://www.iwsec.org/css/2024/program.html" target="_blank" rel="noopener">大規模言語モデルが有する自己選好バイアスの実態調査</a></div>
-              <div class="meta"><u><b>綿岡晃輝</b></u>, 髙橋翼, 李凌寒 — コンピュータセキュリティシンポジウム (CSS) 2024 論文集, pp.214‑221</div>
+              <div class="meta"><b>綿岡晃輝</b>, 髙橋翼, 李凌寒 — コンピュータセキュリティシンポジウム (CSS) 2024 論文集, pp.214‑221</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2024/" target="_blank" rel="noopener">Constitutional AIにおけるセーフティアラインメントの改善</a></div>
-              <div class="meta"><u><b>綿岡晃輝</b></u>, Thien Q. Tran, 前田若菜, 髙橋翼 — 言語処理学会第30回年次大会 (NLP 2024)</div>
+              <div class="meta"><b>綿岡晃輝</b>, Thien Q. Tran, 前田若菜, 髙橋翼 — 言語処理学会第30回年次大会 (NLP 2024)</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2024/" target="_blank" rel="noopener">モデル介入を用いる Jailbreak prompt 攻撃の初期応答の選択手法</a></div>
-              <div class="meta">Thien Q. Tran, <u><b>綿岡晃輝</b></u>, 髙橋翼 — 言語処理学会第30回年次大会 (NLP 2024)</div>
+              <div class="meta">Thien Q. Tran, <b>綿岡晃輝</b>, 髙橋翼 — 言語処理学会第30回年次大会 (NLP 2024)</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://www.iwsec.org/css/2023/program.html" target="_blank" rel="noopener">第3世代 Intel Xeon Scalable Processors による大規模 Enclave 領域を用いた Shuffling の検討</a></div>
-              <div class="meta">長谷川聡, <u><b>綿岡晃輝</b></u>, 骻橋翼, 竹之内隆夫 — CSS 2023 論文集, pp.1412‑1419</div>
+              <div class="meta">長谷川聡, <b>綿岡晃輝</b>, 骻橋翼, 竹之内隆夫 — CSS 2023 論文集, pp.1412‑1419</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://www.iwsec.org/css/2023/program.html" target="_blank" rel="noopener">秘匿クロス集計の大規模化および P2P Remote Attestation の導入に関する一検討</a></div>
-              <div class="meta"><u><b>綿岡晃輝</b></u>, 長谷川聡, 高橋翼, 竹之内隆夫 — CSS 2023 論文集, pp.1405‑1411</div>
+              <div class="meta"><b>綿岡晃輝</b>, 長谷川聡, 高橋翼, 竹之内隆夫 — CSS 2023 論文集, pp.1405‑1411</div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://www.iwsec.org/css/2022/program.html" target="_blank" rel="noopener">言語モデルの倫理的検査のための効率的なテストケースの生成</a></div>
-              <div class="meta"><u><b>綿岡晃輝</b></u>, 野崎雄斗, 馬越雅人, 高橋翼 — CSS 2022 論文集, pp.1322‑1328 <a href="https://www.iwsec.org/css/2022/award.html" target="_blank" rel="noopener" class="award">[奨励賞]</a> </div>
+              <div class="meta"><b>綿岡晃輝</b>, 野崎雄斗, 馬越雅人, 高橋翼 — CSS 2022 論文集, pp.1322‑1328 <a href="https://www.iwsec.org/css/2022/award.html" target="_blank" rel="noopener" class="award">[奨励賞]</a> </div>
             </div>
             <div class="pub">
               <div class="title">公平性が引き起こす敵対的攻撃に対する脆弱性</div>
-              <div class="meta"><u><b>綿岡晃輝</b></u>, 松原崇, 上原邦昭 — 電子情報通信学会 技術研究報告 119(476), pp.101‑105, 2020</div>
+              <div class="meta"><b>綿岡晃輝</b>, 松原崇, 上原邦昭 — 電子情報通信学会 技術研究報告 119(476), pp.101‑105, 2020</div>
             </div>
             <div class="pub">
               <div class="title">公平性により生じる敵対的攻撃に対する脆弱性</div>
-              <div class="meta"><u><b>綿岡晃輝</b></u>, 松原崇, 上原邦昭 — 人工知能学会 全国大会 (2020)</div>
+              <div class="meta"><b>綿岡晃輝</b>, 松原崇, 上原邦昭 — 人工知能学会 全国大会 (2020)</div>
             </div>
           </div>
         </div>
@@ -406,17 +427,17 @@
     </section>
 
     <section id="patents">
-      <h2>Patents</h2>
+      <h2 data-i18n="patents-title">Patents</h2>
       <div class="pubs">
         <div class="pub">
           <div class="title"><a href="https://www.j-platpat.inpit.go.jp/p0200" target="_blank" rel="noopener">特開2023-121470, プログラム、情報処理方法、情報処理装置</a></div>
-          <div class="meta"><u><b>綿岡晃輝</b></u> — 日本国特許庁 (Japan Patent Office)</div>
+          <div class="meta"><b>綿岡晃輝</b> — 日本国特許庁 (Japan Patent Office)</div>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Contact & Links</h2>
+      <h2 data-i18n="contact-title">Contact & Links</h2>
       <p>Email: <a href="mailto:wataoka.koki@gmail.com">wataoka.koki@gmail.com</a></p>
       <p class="lead">
         <a href="https://scholar.google.com/citations?user=J8FuRZgAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
@@ -432,6 +453,86 @@
   
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    (function(){
+      const dict = {
+        en: {
+          'header-sub': 'Responsible AI Team, SB Intuitions / Softbank',
+          'about-title': 'About',
+          'about-lead': 'I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs. Previously worked on fairness and privacy‑preserving computation. My recent work studies LLM‑as‑a‑Judge biases (verbosity / self‑preference), jailbreak attacks, and LLM fingerprinting.',
+          'career-title': 'Career',
+          'pubs-title': 'Publications',
+          'intl-title': 'International',
+          'domestic-title': 'Domestic (Japan)',
+          'appointments-title': 'Appointments',
+          'appointments-mic': 'Member, MIC (Japan) AI Security Subcommittee',
+          'patents-title': 'Patents',
+          'contact-title': 'Contact & Links',
+          'lang-en': 'EN',
+          'lang-ja': '日本語'
+        },
+        ja: {
+          'header-sub': 'Responsible AIチーム, SB Intuitions / ソフトバンク',
+          'about-title': '概要',
+          'about-lead': 'SB Intuitions Responsible AIチーム リーダー / Chief Research Engineer。LLMやVLMにおける安全性評価や訓練、レッドチーミングやガードレールなどの<strong>AIセーフティ</strong>に取り組んでいます。研究分野としては、LLM-as-a-Judgeにおけるバイアス、ジェイルブレイク攻撃、LLMのフィンガープリンティング、機械学習の公平性、プライバシー保護計算などです。',
+          'career-title': '経歴',
+          'pubs-title': '研究業績',
+          'intl-title': '国際',
+          'domestic-title': '国内',
+          'appointments-title': '委員・職務',
+          'appointments-mic': '総務省 AIセキュリティ分科会 構成員',
+          'patents-title': '特許',
+          'contact-title': '連絡先とリンク',
+          'lang-en': 'EN',
+          'lang-ja': '日本語'
+        }
+      };
+
+      const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+
+      function applyLang(lang) {
+        const t = dict[lang] || dict.en;
+        document.documentElement.lang = lang;
+        const enLink = document.getElementById('lang-en');
+        const jaLink = document.getElementById('lang-ja');
+        if (enLink && jaLink) {
+          enLink.style.opacity = lang === 'en' ? '1' : '.6';
+          jaLink.style.opacity = lang === 'ja' ? '1' : '.6';
+          enLink.textContent = t['lang-en'];
+          jaLink.textContent = t['lang-ja'];
+        }
+        $$('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          const val = t[key];
+          if (!val) return;
+          if (el.hasAttribute('data-i18n-html')) {
+            el.innerHTML = val;
+          } else {
+            el.textContent = val;
+          }
+        });
+      }
+
+      function setLang(lang) {
+        try { localStorage.setItem('lang', lang); } catch {}
+        applyLang(lang);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const stored = (() => { try { return localStorage.getItem('lang'); } catch { return null; } })();
+        const preferred = stored || ((navigator.language||'en').toLowerCase().startsWith('ja') ? 'ja' : 'en');
+        applyLang(preferred);
+
+        $$('[data-lang]').forEach(a => {
+          a.addEventListener('click', e => {
+            e.preventDefault();
+            const lang = a.getAttribute('data-lang');
+            setLang(lang);
+          });
+        });
+      });
+    })();
   </script>
 </body>
 </html>
