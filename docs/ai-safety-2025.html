@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025年、AI Safetyで起きた重要な動き</title>
+  <style>
+    /* --- 提供されたCSS --- */
+    :root {
+      --bg: #0b0c0f;
+      --fg: #e9eef2;
+      --muted: #9aa4ad;
+      --line: #1a1c22;
+      --accent: #84a6ff;
+      --pad: 22px;
+      --max: 860px;
+    }
+    
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --fg: #0b0c0f;
+        --muted: #5c6670;
+        --line: #e9eef2;
+        --accent: #1a4bff;
+      }
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+    }
+    
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    
+    a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    
+    a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: calc(var(--pad) * 1.5) var(--pad) calc(var(--pad) * 0.6) var(--pad);
+    }
+    
+    header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: calc(var(--pad) * 0.5);
+      margin-bottom: calc(var(--pad) * 1.5);
+    }
+    
+    h1 {
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    
+    h1 .sub {
+      display: block;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+    
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+    
+    nav a {
+      border: 0;
+      opacity: .85;
+    }
+    
+    nav a:hover {
+      opacity: 1;
+    }
+    
+    section {
+      padding: calc(var(--pad) * 1.2) 0;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+    
+    h2 {
+      margin: 0 0 24px 0;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      margin: 24px 0 12px 0;
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+    
+    p {
+      margin-bottom: 1.5em;
+      color: var(--fg);
+    }
+    
+    .lead {
+      color: var(--muted);
+      max-width: 62ch;
+    }
+    
+    /* 論文・文献リスト用スタイル */
+    .pubs {
+      display: grid;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    
+    .pub {
+      display: grid;
+      gap: 4px;
+    }
+    
+    .pub .title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    
+    .pub .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    /* 追加: テーブルスタイル (CSS変数に適合) */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.95rem;
+    }
+
+    th {
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      padding: 12px 8px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    td {
+      border-bottom: 1px dashed var(--line);
+      padding: 16px 8px;
+      vertical-align: top;
+    }
+
+    td strong {
+      font-weight: 600;
+      color: var(--fg);
+    }
+    
+    footer {
+      padding: calc(var(--pad) * 2) 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 640px) {
+      .wrap {
+        padding: calc(var(--pad) * 1.2) calc(var(--pad) * 0.8) calc(var(--pad) * 0.6) calc(var(--pad) * 0.8);
+      }
+      
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      h1 .sub {
+        font-size: 0.85rem;
+      }
+
+      th, td {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+        padding: 4px 0;
+      }
+      
+      th {
+        display: none; /* モバイルではヘッダー非表示 */
+      }
+
+      tr {
+        display: block;
+        border-bottom: 1px dashed var(--line);
+        padding: 12px 0;
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>
+          2025年、AI Safetyで起きた重要な動き
+          <span class="sub">
+            綿岡晃輝 (Wataoka Koki), December 31, 2025
+          </span>
+        </h1>
+      </div>
+    </header>
+
+    <section>
+      <p class="lead">
+        この一年間、SB IntuitionsのResponsible AIチームのリーダーとして、AI安全性の研究開発に広く携わることができました。
+        ここでは、私が感じた"2025年の動き"を感じられるようまとめて見たいと思います。
+      </p>
+    </section>
+
+    <section>
+      <h2>安全性対策が複雑化</h2>
+      <p>
+        かつてのSafety Alignmentは、モデルの全般的な能力向上と同様に、人間によるアノテーションデータを用いたSFTやRLHFが中心的でした。しかし、今日では、このパラダイムは完全に転換したと言えるでしょう。
+      </p>
+      <p>
+        特に <strong>RLVF (Reinforcement Learning from Verifiable Feedback)</strong> [<a href="https://arxiv.org/abs/2411.15124" target="_blank">1</a>, <a href="https://arxiv.org/abs/2501.12948" target="_blank">2</a>] の潮流以降、事後学習における合成データの利用が支配的となり、全体のデータ量は爆発的に増加しました。安全性対策においても、単にSFTデータとPreferenceデータを人手で準備すれば終わりという時代は終焉を迎えました。
+      </p>
+      <p>
+        しかし、安全性の問題は数学やパズルのように、一律に検証可能な領域ではありません。そのため、体系的に自然言語で記述された安全性ルールである <a href="https://model-spec.openai.com/2025-12-18.html" target="_blank">OpenAI Model Spec</a> 等に対し、どれほど忠実にアラインメントできているかを検証する <a href="https://openai.com/index/collective-alignment-aug-2025-updates/" target="_blank">Collective Alignment</a> のようなアプローチが加速しています。
+      </p>
+      <p>
+        また、LLMの情報処理能力と正確性が向上したことで、懸念されるリスクも質的に変化しています。単なる不適切な発言の防止を超え、深刻な犯罪行為への悪用リスクが最大の懸念事項となりました。<a href="https://cdn.openai.com/gpt-5-system-card.pdf" target="_blank">GPT-5のシステムカード</a> によれば、400人以上の専門家による5,000時間以上のレッドチーミングが実施され、高度な推論能力に伴う悪用リスクへの対策に莫大なリソースが投じられました。同時に、<a href="https://arxiv.org/abs/2410.05295" target="_blank">AutoDAN-Turbo</a> のような自動レッドチーミング手法の発達を続けています。
+      </p>
+      <p>
+        2025年は、AIがブラウザやツールを操作する実行権限を本格的に持ち始めた年でもあります。これに伴い、ユーザーの介入なしに機密情報の漏洩などが成立する初のゼロクリック攻撃 <a href="https://www.varonis.com/blog/echoleak" target="_blank">EchoLeak</a> が報告されるなど、防御側にはより実務的なセキュリティ対策が求められるようになりました。
+      </p>
+      <p>
+        こうした状況下で、安全性の確保はもはや単なる機械学習の技術的課題に留まりません。Google DeepMindが提唱する <a href="https://deepmind.google/blog/strengthening-our-frontier-safety-framework/" target="_blank">Frontier Safety Framework</a> のように、インシデントへの即応体制やガバナンスを含めた、組織全体としての課題解決が不可欠なフェーズに突入しています。
+      </p>
+    </section>
+
+    <section>
+      <h2>ガードレールモデルが飛躍的発展</h2>
+      <p>
+        2025年は、メインのLLMを保護するガードレールモデルが、単なる補助的なフィルターから、それ自体が巨大な計算資源とデータを投じられた高度な推論モデルへと進化した年でした。
+      </p>
+      <p>
+        これまでガードレールモデルの課題は、学習データに含まれない新しい攻撃手法や、複雑な文脈に潜む有害性を検知できないこと（汎化性能の不足）にありました。しかし、2025年は合成データの戦略的活用により、この壁が突破されました。
+      </p>
+
+      <div class="pubs">
+        <div class="pub">
+          <div class="title"><a href="https://arxiv.org/abs/2501.18837" target="_blank">Constitutional Classifier</a></div>
+          <div class="meta">行動規範に基づき、AI自身が多様な攻撃シナリオとそれに対する判定根拠を生成・学習することで、人手では網羅不可能な複雑なタスクへの適応を実現しました。</div>
+        </div>
+        <div class="pub">
+          <div class="title"><a href="https://arxiv.org/abs/2503.06550" target="_blank">BingoGuard</a></div>
+          <div class="meta">モデルがどのリスクにどの程度の深刻さで違反しているかを出力するラベルデータを生成し、検知精度と説明可能性の向上を実現しました。</div>
+        </div>
+        <div class="pub">
+          <div class="title"><a href="https://arxiv.org/abs/2509.02563" target="_blank">DynaGuard</a></div>
+          <div class="meta">自由なポリシーから学習データを自動生成し、柔軟な判断を可能にする学習フレームワークを確立しました。</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 32px;">
+        研究レベルの進化に留まらず、商用レベルで即戦力となる強力なモデルが相次いで公開され、安全性対策の民主化が進みました。
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th width="30%">モデル名</th>
+            <th>特徴とURL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>LlamaGuard 4</strong></td>
+            <td>Metaが公開した、エージェントの行動ログや多言語での安全性判定に特化したOSSモデル。<br><a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama-guard-4/" target="_blank">Model Card & Docs</a></td>
+          </tr>
+          <tr>
+            <td><strong>gpt-oss-safeguard</strong></td>
+            <td>OpenAIがModeration APIの知見をOSSとして提供。商用APIと同等の基準をローカル環境で実現可能に。<br><a href="https://openai.com/index/introducing-gpt-oss-safeguard/" target="_blank">Introducing Post</a></td>
+          </tr>
+          <tr>
+            <td><strong>Qwen3Guard</strong></td>
+            <td>特に東アジア圏の言語や文化特有の有害表現において、極めて高い検知性能を誇る強力なガードレール。<br><a href="https://github.com/QwenLM/Qwen3Guard" target="_blank">GitHub Repository</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>LLMの挙動解明に繋がるいくつかの研究</h2>
+      <p>
+        安全性を高めるためには、単に対策を講じるだけでなく、モデルの内部で何が起きているのかという根本的なメカニズムの解明が不可欠です。2025年は、いくつかの挙動に対し、重要な知見が示されました。
+      </p>
+
+      <div class="pubs">
+        <div class="pub">
+          <div class="title">ハルシネーションが起きる理由</div>
+          <div class="meta">
+            <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank">Why Language Models Hallucinate</a> (OpenAI)<br>
+            モデルがもっともらしい嘘をつくハルシネーションは、長らくLLM最大の課題でした。分析報告では、これが単なるデータ不足ではなく、学習プロセスにおける不確実性のキャリブレーション不足に起因することが示唆されました。例えば、未知の人物の誕生日を聞かれた場合、1/365の確率で正解しRewardが与えられてしまうため、モデルにとっては「適当に回答する」という選択が最善となってしまう問題が指摘されています。
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="title">自由回答の均質化（Homogenization）への警鐘</div>
+          <div class="meta">
+            <a href="https://arxiv.org/abs/2510.22954" target="_blank">The Homogenization of Free-form Responses in LLMs</a><br>
+            RLHFの副作用として、モデルの回答が「当たり障りのない、似通ったもの」になってしまう問題が深刻化しています。この研究では、過度なアラインメントがモデルの創造性や多様な視点を奪い、結果として平均的な回答に収束してしまうリスクを指摘しています。
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="title">AIの内省能力（Introspection）の検証</div>
+          <div class="meta">
+            <a href="https://www.anthropic.com/research/introspection" target="_blank">Evaluating Introspection in Large Language Models</a> (Anthropic)<br>
+            モデルが回答を生成する前に、自身の論理的な不整合や潜在的な有害性を自己検出し、修正するプロセスの可視化が進んでいます。この「メタ認知」能力の向上は、外部からのガードレールに頼り切らない、モデル内部での「自律的な安全性」の確保に向けた大きな一歩となります。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>まとめ</h2>
+      <p>
+        AI Safetyの分野は、基盤モデルの飛躍的な能力向上と権限の獲得により、急激な進化が要求されている苦境の時代と言えるかもしれません。
+        しかし、これほど社会に必要とされた時代もなかったかと感じています。
+        また、2026年はより多くの課題が解決され、新たな挑戦ができるかと思うとワクワクしますね。
+      </p>
+      
+      <div class="pub" style="border: 1px solid var(--line); padding: 16px; border-radius: 8px; margin-top: 24px;">
+        <div class="title" style="margin-bottom: 8px;">📢 講演のお知らせ</div>
+        <div class="meta">
+          言語処理学会 (NLP2026) にて、以下のチュートリアル講演を行います。<br>
+          <strong>チュートリアル1：AI Safety: Bridging Academic Research and Industrial Application</strong><br>
+          <a href="https://anlp.jp/nlp2026/" target="_blank" style="display:inline-block; margin-top:8px;">詳細はこちら (NLP2026)</a>
+          <br><br>
+          ご興味がある方はぜひご聴講ください。講演後、本記事を見ていただいた方はぜひお声がけください！
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 AI Safety Year in Review
+    </footer>
+  </div>
+
+</body>
+</html>
