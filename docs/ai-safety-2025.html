@@ -44,7 +44,7 @@
     }
     
     a {
-      color: var(--fg);
+      color: var(--accent);
       text-decoration: none;
       border-bottom: 1px solid var(--line);
       transition: color 0.2s, border-color 0.2s;
@@ -247,12 +247,10 @@
       </div>
     </header>
 
-    <section>
-      <p class="lead">
-        この一年間、SB IntuitionsのResponsible AIチームのリーダーとして、AI安全性の研究開発に広く携わることができました。
-        ここでは、私が感じた"2025年の動き"を感じられるようまとめて見たいと思います。
-      </p>
-    </section>
+    <p class="lead">
+      この一年間、SB IntuitionsのResponsible AIチームのリーダーとして、AI安全性の研究開発に広く携わることができました。
+      ここでは、私が感じた"2025年の動き"をまとめてみたいと思います。
+    </p>
 
     <section>
       <h2>安全性対策が複雑化</h2>
@@ -260,7 +258,7 @@
         かつてのSafety Alignmentは、モデルの全般的な能力向上と同様に、人間によるアノテーションデータを用いたSFTやRLHFが中心的でした。しかし、今日では、このパラダイムは完全に転換したと言えるでしょう。
       </p>
       <p>
-        特に <strong>RLVF (Reinforcement Learning from Verifiable Feedback)</strong> [<a href="https://arxiv.org/abs/2411.15124" target="_blank">1</a>, <a href="https://arxiv.org/abs/2501.12948" target="_blank">2</a>] の潮流以降、事後学習における合成データの利用が支配的となり、全体のデータ量は爆発的に増加しました。安全性対策においても、単にSFTデータとPreferenceデータを人手で準備すれば終わりという時代は終焉を迎えました。
+        特に <strong>RLVF (Reinforcement Learning from Verifiable Feedback)</strong> [<a href="https://arxiv.org/abs/2411.15124" target="_blank">Tulu 3</a>, <a href="https://arxiv.org/abs/2501.12948" target="_blank">DeepSeek-R1</a>] の潮流以降、事後学習における合成データの利用が支配的となり、全体のデータ量は爆発的に増加しました。安全性対策においても、単にSFTデータとPreferenceデータを人手で準備すれば終わりという時代は終焉を迎えました。
       </p>
       <p>
         しかし、安全性の問題は数学やパズルのように、一律に検証可能な領域ではありません。そのため、体系的に自然言語で記述された安全性ルールである <a href="https://model-spec.openai.com/2025-12-18.html" target="_blank">OpenAI Model Spec</a> 等に対し、どれほど忠実にアラインメントできているかを検証する <a href="https://openai.com/index/collective-alignment-aug-2025-updates/" target="_blank">Collective Alignment</a> のようなアプローチが加速しています。
@@ -287,15 +285,18 @@
 
       <div class="pubs">
         <div class="pub">
-          <div class="title"><a href="https://arxiv.org/abs/2501.18837" target="_blank">Constitutional Classifier</a></div>
+          <div class="title">Constitutional Classifier</div>
+          <div><a href="https://arxiv.org/abs/2501.18837" target="_blank">https://arxiv.org/abs/2501.18837</a></div>
           <div class="meta">行動規範に基づき、AI自身が多様な攻撃シナリオとそれに対する判定根拠を生成・学習することで、人手では網羅不可能な複雑なタスクへの適応を実現しました。</div>
         </div>
         <div class="pub">
-          <div class="title"><a href="https://arxiv.org/abs/2503.06550" target="_blank">BingoGuard</a></div>
+          <div class="title">BingoGuard</div>
+          <div><a href="https://arxiv.org/abs/2503.06550" target="_blank">https://arxiv.org/abs/2503.06550</a></div>
           <div class="meta">モデルがどのリスクにどの程度の深刻さで違反しているかを出力するラベルデータを生成し、検知精度と説明可能性の向上を実現しました。</div>
         </div>
         <div class="pub">
-          <div class="title"><a href="https://arxiv.org/abs/2509.02563" target="_blank">DynaGuard</a></div>
+          <div class="title">DynaGuard</div>
+          <div><a href="https://arxiv.org/abs/2509.02563" target="_blank">https://arxiv.org/abs/2509.02563</a></div>
           <div class="meta">自由なポリシーから学習データを自動生成し、柔軟な判断を可能にする学習フレームワークを確立しました。</div>
         </div>
       </div>
@@ -314,15 +315,15 @@
         <tbody>
           <tr>
             <td><strong>LlamaGuard 4</strong></td>
-            <td>Metaが公開した、エージェントの行動ログや多言語での安全性判定に特化したOSSモデル。<br><a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama-guard-4/" target="_blank">Model Card & Docs</a></td>
+            <td>Metaが継続的に公開しているLlama Guardシリーズで、画像にも対応している。 <a href="https://www.llama.com/docs/model-cards-and-prompt-formats/llama-guard-4/" target="_blank">https://www.llama.com/docs/model-cards-and-prompt-formats/llama-guard-4</a></td>
           </tr>
           <tr>
             <td><strong>gpt-oss-safeguard</strong></td>
-            <td>OpenAIがModeration APIの知見をOSSとして提供。商用APIと同等の基準をローカル環境で実現可能に。<br><a href="https://openai.com/index/introducing-gpt-oss-safeguard/" target="_blank">Introducing Post</a></td>
+            <td>OpenAIがModeration APIの知見をOSSとして提供。商用APIと同等の基準をローカル環境で実現可能に <a href="https://openai.com/index/introducing-gpt-oss-safeguard/" target="_blank">https://openai.com/index/introducing-gpt-oss-safeguard/</a></td>
           </tr>
           <tr>
             <td><strong>Qwen3Guard</strong></td>
-            <td>特に東アジア圏の言語や文化特有の有害表現において、極めて高い検知性能を誇る強力なガードレール。<br><a href="https://github.com/QwenLM/Qwen3Guard" target="_blank">GitHub Repository</a></td>
+            <td>特に東アジア圏の言語や文化特有の有害表現において、極めて高い検知性能を誇る強力なガードレール <a href="https://github.com/QwenLM/Qwen3Guard" target="_blank">https://github.com/QwenLM/Qwen3Guard</a></td>
           </tr>
         </tbody>
       </table>
