@@ -14,8 +14,8 @@ SB Intuitions Responsible AIチーム リーダー / Chief Research Engineer。L
 |------|------|------|
 | 2023 – 現在 | Responsible AIチーム | SB Intuitions |
 | 2021 – 2023 | Trustworthy AIチーム | LINE Corporation |
-| 2019 – 2021 | 修士学生 | 神戸大学 |
-| 2015 – 2019 | 学部生 | 大阪市立大学 |
+| 2019 – 2021 | 修士 | 神戸大学 (システム情報学研究所) |
+| 2015 – 2019 | 学士 | 大阪市立大学 (電気情報工学) |
 
 ## 委員・職務
 

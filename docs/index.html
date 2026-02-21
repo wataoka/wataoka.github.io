@@ -224,7 +224,7 @@
       margin-bottom: 2px;
     }
     
-    .career-company {
+    .career-subtitle {
       color: var(--muted);
       font-size: 0.92rem;
     }
@@ -283,77 +283,81 @@
         <img src="wataoka2025.jpg" alt="Koki Wataoka" class="profile-image">
         <div>
           <h1>
-            <span data-i18n="header-name">Koki Wataoka</span>
-            <span class="sub" data-i18n="header-sub">Responsible AI Team, SB Intuitions / Softbank</span>
+            <span data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</span>
+            <span class="sub" data-en="Responsible AI Team, SB Intuitions / Softbank" data-ja="Responsible AIチーム, SB Intuitions / ソフトバンク">Responsible AI Team, SB Intuitions / Softbank</span>
           </h1>
         </div>
       </div>
       <nav aria-label="Language">
-        <a href="#" id="lang-en" data-lang="en">EN</a>
+        <a href="#" id="lang-en" data-lang="en" data-en="EN" data-ja="EN">EN</a>
         <span class="nowrap" style="opacity:.5">/</span>
-        <a href="#" id="lang-ja" data-lang="ja">日本語</a>
+        <a href="#" id="lang-ja" data-lang="ja" data-en="日本語" data-ja="日本語">日本語</a>
       </nav>
     </header>
 
     <section id="about">
-      <h2 data-i18n="about-title">About</h2>
-      <p class="lead" data-i18n="about-lead" data-i18n-html="true">
+      <h2 data-en="About" data-ja="概要">About</h2>
+
+      <p class="lead" data-lang-content="en">
         I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs.
         Previously worked on fairness and privacy‑preserving computation.
         My recent work studies LLM‑as‑a‑Judge biases (verbosity / self‑preference), jailbreak attacks, and LLM fingerprinting.
       </p>
+      <p class="lead" data-lang-content="ja" style="display:none;">
+        SB Intuitions Responsible AIチーム リーダー / Chief Research Engineer。LLMやVLMにおける安全性評価や訓練、レッドチーミングやガードレールなどの<strong>AIセーフティ</strong>に取り組んでいます。研究分野としては、LLM-as-a-Judgeにおけるバイアス、ジェイルブレイク攻撃、LLMのフィンガープリンティング、機械学習の公平性、プライバシー保護計算などです。
+      </p>
     </section>
     
     <section id="career">
-      <h2 data-i18n="career-title">Career</h2>
+      <h2 data-en="Career" data-ja="経歴">Career</h2>
       <div class="career-timeline">
         <div class="career-item">
-          <div class="career-period">2023 – Present</div>
+          <div class="career-period" data-en="2023 – Present" data-ja="2023 – 現在">2023 – Present</div>
           <div class="career-details">
-            <div class="career-title">Responsible AI Team</div>
-            <div class="career-company">SB Intuitions</div>
+            <div class="career-title">SB Intuitions</div>
+            <div class="career-subtitle" data-en="Responsible AI Team" data-ja="Responsible AIチーム">Responsible AI Team</div>
           </div>
         </div>
         <div class="career-item">
           <div class="career-period">2021 – 2023</div>
           <div class="career-details">
-            <div class="career-title">Trustworthy AI Team</div>
-            <div class="career-company">LINE Corporation</div>
+            <div class="career-title">LINE Corporation</div>
+            <div class="career-subtitle" data-en="Trustworthy AI Team" data-ja="Trustworthy AIチーム">Trustworthy AI Team</div>
           </div>
         </div>
         <div class="career-item">
           <div class="career-period">2019 – 2021</div>
           <div class="career-details">
-            <div class="career-title">MS Student</div>
-            <div class="career-company">Kobe University</div>
+            <div class="career-title" data-en="Kobe University Graduate School" data-ja="神戸大学 大学院">Kobe University</div>
+            <div class="career-subtitle" data-en="Graduate School of System Informatics" data-ja="システム情報学研究所">MS Student</div>
           </div>
         </div>
         <div class="career-item">
           <div class="career-period">2015 – 2019</div>
           <div class="career-details">
-            <div class="career-title">Undergraduate Student</div>
-            <div class="career-company">Osaka City University</div>
+            <div class="career-title" data-en="Osaka City University" data-ja="大阪市立大学">Osaka City University</div>
+            <div class="career-subtitle" data-en="Department of Electrical and Information Engineering" data-ja="電気情報工学科">Undergraduate Student</div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="appointments">
-      <h2 data-i18n="appointments-title">Appointments</h2>
+      <h2 data-en="Appointments" data-ja="委員・職務">Appointments</h2>
       <div class="pubs">
         <div class="pub">
           <div class="title">
-            <a href="https://www.soumu.go.jp/main_sosiki/kenkyu/cybersecurity_taskforce/02cyber01_04000001_00321.html" target="_blank" rel="noopener" data-i18n="appointments-mic">Member, MIC (Japan) AI Security Subcommittee</a>
+            <a href="https://www.soumu.go.jp/main_sosiki/kenkyu/cybersecurity_taskforce/02cyber01_04000001_00321.html" target="_blank" rel="noopener" data-en="Member, MIC (Japan) AI Security Subcommittee" data-ja="総務省 AIセキュリティ分科会 構成員">Member, MIC (Japan) AI Security Subcommittee</a>
           </div>
         </div>
       </div>
     </section>
     
     <section id="publications">
-      <h2 data-i18n="pubs-title">Publications</h2>
+      <h2 data-en="Publications" data-ja="研究業績">Publications</h2>
       <div class="cats">
         <div>
-          <h3 data-i18n="intl-title">International (peer‑reviewed)</h3>
+          <h3 data-en="International" data-ja="国際">International (peer‑reviewed)</h3>
           <div class="pubs">
             <div class="pub">
               <div class="title"><a href="https://www.apsipa2025.org/wp/session-2/" target="_blank" rel="noopener"> Foundation Models as Guardrails: LLM- and VLM-Based Approaches to Safety and Alignment</a></div>
@@ -378,7 +382,7 @@
           </div>
         </div>
         <div>
-          <h3 data-i18n="domestic-title">Domestic (Japan)</h3>
+          <h3 data-en="Domestic (Japan)" data-ja="国内">Domestic (Japan)</h3>
           <div class="pubs">
             <div class="pub">
               <div class="title"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/" target="_blank" rel="noopener">事前学習コーパス内の特定の属性への言及の急激な変化の調査</a></div>
@@ -427,25 +431,25 @@
     </section>
 
     <section id="lectures">
-      <h2 data-i18n="lectures-title">Lectures / Presentations</h2>
+      <h2 data-en="Lectures / Presentations" data-ja="講演">Lectures / Presentations</h2>
       <div class="pubs">
         <div class="pub">
           <div class="title">
-            <a href="https://ken.ieice.org/ken/paper/20260120fcqF/" target="_blank" rel="noopener" data-i18n="lecture-ieice">[Invited Talk] Safety Practices in Foundation Model Development</a>
+            <a href="https://ken.ieice.org/ken/paper/20260120fcqF/" target="_blank" rel="noopener" data-en="[Invited Talk] Safety Practices in Foundation Model Development" data-ja="［招待講演］大規模基盤モデル開発における安全性対策">[Invited Talk] Safety Practices in Foundation Model Development</a>
           </div>
-          <div class="meta" data-i18n="lecture-ieice-meta">January 20, 2026 — The Institute of Electronics, Information and Communication Engineers, Technical Committee on Enriched Multimedia (IEICE EMM)</div>
+          <div class="meta" data-en="January 20, 2026 — The Institute of Electronics, Information and Communication Engineers, Technical Committee on Enriched Multimedia (IEICE EMM)" data-ja="2026年1月20日 — 電気情報通信学会 高機能マルチメディア研究会（IEICE EMM）">January 20, 2026 — The Institute of Electronics, Information and Communication Engineers, Technical Committee on Enriched Multimedia (IEICE EMM)</div>
         </div>
         <div class="pub">
           <div class="title">
-            <a href="https://anlp.jp/nlp2026/#tutorial" target="_blank" rel="noopener" data-i18n="lecture-nlp">Tutorial 1: AI Safety: Bridging Academic Research and Industrial Application</a>
+            <a href="https://anlp.jp/nlp2026/#tutorial" target="_blank" rel="noopener" data-en="Tutorial 1: AI Safety: Bridging Academic Research and Industrial Application" data-ja="チュートリアル１：AI Safety: Bridging Academic Research and Industrial Application">Tutorial 1: AI Safety: Bridging Academic Research and Industrial Application</a>
           </div>
-          <div class="meta" data-i18n="lecture-nlp-meta">March 9, 2026 — The 32nd Annual Meeting of the Association for Natural Language Processing (NLP2026)</div>
+          <div class="meta" data-en="March 9, 2026 — The 32nd Annual Meeting of the Association for Natural Language Processing (NLP2026)" data-ja="2026年3月9日 — 言語処理学会第32回年次大会(NLP2026)">March 9, 2026 — The 32nd Annual Meeting of the Association for Natural Language Processing (NLP2026)</div>
         </div>
       </div>
     </section>
 
     <section id="patents">
-      <h2 data-i18n="patents-title">Patents</h2>
+      <h2 data-en="Patents" data-ja="特許">Patents</h2>
       <div class="pubs">
         <div class="pub">
           <div class="title"><a href="https://www.j-platpat.inpit.go.jp/p0200" target="_blank" rel="noopener">特開2023-121470, プログラム、情報処理方法、情報処理装置</a></div>
@@ -455,12 +459,13 @@
     </section>
 
     <section id="contact">
-      <h2 data-i18n="contact-title">Contact & Links</h2>
+      <h2 data-en="Contact & Links" data-ja="連絡先とリンク">Contact & Links</h2>
       <p>Email: <a href="mailto:wataoka.koki@gmail.com">wataoka.koki@gmail.com</a></p>
       <p class="lead">
         <a href="https://scholar.google.com/citations?user=J8FuRZgAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
         <a href="https://github.com/wataoka" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+        <a href="https://x.com/wataoka_koki" target="_blank" rel="noopener">X</a>・
+        <a href="https://www.instagram.com/wataoka.koki" target="_blank" rel="noopener">Instagram</a>
       </p>
     </section>
 
@@ -473,73 +478,34 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
   <script>
+    // Much simpler internationalization using inline data attributes
     (function(){
-      const dict = {
-        en: {
-          'header-name': 'Koki Wataoka',
-          'header-sub': 'Responsible AI Team, SB Intuitions / Softbank',
-          'about-title': 'About',
-          'about-lead': 'I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs. Previously worked on fairness and privacy‑preserving computation. My recent work studies LLM‑as‑a‑Judge biases (verbosity / self‑preference), jailbreak attacks, and LLM fingerprinting.',
-          'career-title': 'Career',
-          'pubs-title': 'Publications',
-          'intl-title': 'International',
-          'domestic-title': 'Domestic (Japan)',
-          'appointments-title': 'Appointments',
-          'appointments-mic': 'Member, MIC (Japan) AI Security Subcommittee',
-          'lectures-title': 'Lectures / Presentations',
-          'lecture-ieice': '[Invited Talk] Safety Practices in Foundation Model Development',
-          'lecture-ieice-meta': 'January 20, 2026 — The Institute of Electronics, Information and Communication Engineers, Technical Committee on Enriched Multimedia (IEICE EMM)',
-          'lecture-nlp': 'Tutorial 1: AI Safety: Bridging Academic Research and Industrial Application',
-          'lecture-nlp-meta': 'March 9, 2026 — The 32nd Annual Meeting of the Association for Natural Language Processing (NLP2026)',
-          'patents-title': 'Patents',
-          'contact-title': 'Contact & Links',
-          'lang-en': 'EN',
-          'lang-ja': '日本語'
-        },
-        ja: {
-          'header-name': '綿岡晃輝',
-          'header-sub': 'Responsible AIチーム, SB Intuitions / ソフトバンク',
-          'about-title': '概要',
-          'about-lead': 'SB Intuitions Responsible AIチーム リーダー / Chief Research Engineer。LLMやVLMにおける安全性評価や訓練、レッドチーミングやガードレールなどの<strong>AIセーフティ</strong>に取り組んでいます。研究分野としては、LLM-as-a-Judgeにおけるバイアス、ジェイルブレイク攻撃、LLMのフィンガープリンティング、機械学習の公平性、プライバシー保護計算などです。',
-          'career-title': '経歴',
-          'pubs-title': '研究業績',
-          'intl-title': '国際',
-          'domestic-title': '国内',
-          'appointments-title': '委員・職務',
-          'appointments-mic': '総務省 AIセキュリティ分科会 構成員',
-          'lectures-title': '講演',
-          'lecture-ieice': '［招待講演］大規模基盤モデル開発における安全性対策',
-          'lecture-ieice-meta': '2026年1月20日 — 電気情報通信学会 高機能マルチメディア研究会（IEICE EMM）',
-          'lecture-nlp': 'チュートリアル１：AI Safety: Bridging Academic Research and Industrial Application',
-          'lecture-nlp-meta': '2026年3月9日 — 言語処理学会第32回年次大会(NLP2026)',
-          'patents-title': '特許',
-          'contact-title': '連絡先とリンク',
-          'lang-en': 'EN',
-          'lang-ja': '日本語'
-        }
-      };
-
-      const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
-
       function applyLang(lang) {
-        const t = dict[lang] || dict.en;
         document.documentElement.lang = lang;
+
+        // Update language link styles
         const enLink = document.getElementById('lang-en');
         const jaLink = document.getElementById('lang-ja');
         if (enLink && jaLink) {
           enLink.style.opacity = lang === 'en' ? '1' : '.6';
           jaLink.style.opacity = lang === 'ja' ? '1' : '.6';
-          enLink.textContent = t['lang-en'];
-          jaLink.textContent = t['lang-ja'];
         }
-        $$('[data-i18n]').forEach(el => {
-          const key = el.getAttribute('data-i18n');
-          const val = t[key];
-          if (!val) return;
-          if (el.hasAttribute('data-i18n-html')) {
-            el.innerHTML = val;
+
+        // Switch short content based on data-en / data-ja attributes
+        document.querySelectorAll('[data-en][data-ja]').forEach(el => {
+          const content = el.getAttribute(`data-${lang}`);
+          if (content) {
+            el.innerHTML = content;
+          }
+        });
+
+        // Show/hide longer content based on data-lang-content attributes
+        document.querySelectorAll('[data-lang-content]').forEach(el => {
+          const elLang = el.getAttribute('data-lang-content');
+          if (elLang === lang) {
+            el.style.display = '';
           } else {
-            el.textContent = val;
+            el.style.display = 'none';
           }
         });
       }
@@ -550,11 +516,13 @@
       }
 
       document.addEventListener('DOMContentLoaded', () => {
+        // Load saved language or default to browser preference
         const stored = (() => { try { return localStorage.getItem('lang'); } catch { return null; } })();
         const preferred = stored || ((navigator.language||'en').toLowerCase().startsWith('ja') ? 'ja' : 'en');
         applyLang(preferred);
 
-        $$('[data-lang]').forEach(a => {
+        // Add click handlers for language switchers
+        document.querySelectorAll('[data-lang]').forEach(a => {
           a.addEventListener('click', e => {
             e.preventDefault();
             const lang = a.getAttribute('data-lang');
