@@ -18,10 +18,17 @@
 ディレクトリ構成:
 
 - `docs/` — 公開対象。`index.html` のほか、画像（`wataoka2025.jpg` 等）、`favicon.ico`、SNS アイコン SVG、`ai-safety-2025.html`（講演スライド系の単発ページ）が同じ階層に置かれている。
-- `docs/index-ja.md` / `docs/index-en.md` — `index.html` の内容を Markdown で持っている下書き。**正は `index.html`** だが、構成や文章のリファレンスとしては有用。文章の大幅な改稿のときはこちらも合わせて更新するか、ユーザーに確認する。
 - `README.md` — リポジトリ全体の説明。サイトのレイアウト変更時に整合性が崩れたら更新する。
 
-過去バージョンの `v1/` / `v2/` / `public/` は整理済みでリポジトリには存在しない。git history からは参照可能だが、現行運用では参照しない。
+過去バージョンの `v1/` / `v2/` / `public/`、および Markdown 下書き（`docs/index-en.md` / `docs/index-ja.md` / `docs/ai-safety-2025.md`）は整理済みでリポジトリには存在しない。git history からは参照可能だが、現行運用では参照しない。
+
+## コンテンツ更新の作法
+
+**Markdown 下書きを介さず、Claude が直接 `index.html`（や `ai-safety-2025.html`）を編集する。** ユーザーは自然言語で依頼するだけで良い:
+
+- 「ICML 2026 のこの論文を業績に追加して。URLは...」 → Claude が業績セクションに同じ HTML 構造で挿入し、`data-en` / `data-ja` も埋める。
+- 「経歴の所属を変えて」 → 該当 `data-en` / `data-ja` を両方更新。
+- 「文章を書き直したい」 → 必要なら Markdown でチャット内に草案を出して推敲してから HTML に反映する。ファイルとしての MD 下書きは持たない。
 
 ## `docs/index.html` の構造（要点）
 

@@ -7,7 +7,6 @@ This is the source for my personal website. It’s written in pure HTML/CSS (wit
 ## 📂 Structure
 `docs/`           → Live site content (served by GitHub Pages)  
 `docs/index.html` → Main page — edit this for content changes  
-`docs/index-en.md`, `docs/index-ja.md` → Markdown drafts of the page (reference only; `index.html` is canonical)  
 `CLAUDE.md`       → Working rules for AI assistants editing this repo  
 
 ## 🚀 Editing & Publishing
