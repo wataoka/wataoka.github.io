@@ -34,7 +34,7 @@
 
 - 単一ファイルに HTML / CSS / JS が同居。外部 CSS・JS ファイルは作らない方針。
 - カラーは `:root` の CSS 変数で定義され、`@media (prefers-color-scheme: light)` でライトテーマに切り替わる。新しい色は変数を経由する。
-- セクション構成: `#about` → `#career` → 業績 → `#talks` → `#patents` → `#contact` → `<footer>`。
+- セクション構成: `#about` → `#career` → `#books` → `#appointments` → `#publications` → `#lectures` → `#patents` → `#contact` → `<footer>`。
 - フォントは Google Fonts の Inter。
 
 ### 多言語対応（EN / JA）
