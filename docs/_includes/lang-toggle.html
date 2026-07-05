@@ -1,0 +1,58 @@
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+<script>
+  // Much simpler internationalization using inline data attributes
+  (function(){
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+
+      // Update language link styles
+      const enLink = document.getElementById('lang-en');
+      const jaLink = document.getElementById('lang-ja');
+      if (enLink && jaLink) {
+        enLink.style.opacity = lang === 'en' ? '1' : '.6';
+        jaLink.style.opacity = lang === 'ja' ? '1' : '.6';
+      }
+
+      // Switch short content based on data-en / data-ja attributes
+      document.querySelectorAll('[data-en][data-ja]').forEach(el => {
+        const content = el.getAttribute(`data-${lang}`);
+        if (content) {
+          el.innerHTML = content;
+        }
+      });
+
+      // Show/hide longer content based on data-lang-content attributes
+      document.querySelectorAll('[data-lang-content]').forEach(el => {
+        const elLang = el.getAttribute('data-lang-content');
+        if (elLang === lang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+
+    function setLang(lang) {
+      try { localStorage.setItem('lang', lang); } catch {}
+      applyLang(lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load saved language or default to browser preference
+      const stored = (() => { try { return localStorage.getItem('lang'); } catch { return null; } })();
+      const preferred = stored || ((navigator.language||'en').toLowerCase().startsWith('ja') ? 'ja' : 'en');
+      applyLang(preferred);
+
+      // Add click handlers for language switchers
+      document.querySelectorAll('[data-lang]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const lang = a.getAttribute('data-lang');
+          setLang(lang);
+        });
+      });
+    });
+  })();
+</script>

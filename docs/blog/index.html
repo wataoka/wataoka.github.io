@@ -1,0 +1,22 @@
+---
+layout: post
+title_en: "Blog"
+title_ja: "ブログ"
+permalink: /blog/
+description: "Blog posts by Koki Wataoka."
+---
+{% assign sorted_posts = site.blog | sort: "date" | reverse %}
+<div data-lang-content="en">
+<ul class="post-list">
+{% for post in sorted_posts %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title_en }}</a> <span class="muted">— {{ post.date | date: "%Y-%m-%d" }}</span></li>
+{% endfor %}
+</ul>
+</div>
+<div data-lang-content="ja" style="display:none;">
+<ul class="post-list">
+{% for post in sorted_posts %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title_ja }}</a> <span class="muted">— {{ post.date | date: "%Y-%m-%d" }}</span></li>
+{% endfor %}
+</ul>
+</div>

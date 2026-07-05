@@ -1,0 +1,366 @@
+<style>
+  :root {
+    --bg: #0b0c0f;
+    --fg: #e9eef2;
+    --muted: #9aa4ad;
+    --line: #1a1c22;
+    --accent: #84a6ff;
+    --pad: 22px;
+    --max: 860px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff;
+      --fg: #0b0c0f;
+      --muted: #5c6670;
+      --line: #e9eef2;
+      --accent: #1a4bff;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  }
+
+  a {
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: calc(var(--pad) * 1.5) var(--pad) calc(var(--pad) * 0.6) var(--pad);
+  }
+
+  header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: calc(var(--pad) * 0.5);
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  h1 .sub {
+    display: block;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  nav {
+    display: flex;
+    gap: 18px;
+    font-size: 0.95rem;
+  }
+
+  nav a {
+    border: 0;
+    opacity: .85;
+  }
+
+  nav a:hover {
+    opacity: 1;
+  }
+
+  section {
+    padding: calc(var(--pad) * 0.6) 0;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .lead {
+    color: var(--muted);
+    max-width: 62ch;
+  }
+
+  .grid {
+    display: grid;
+    gap: 10px;
+  }
+
+  .pubs {
+    display: grid;
+    gap: 16px;
+  }
+
+  .pub {
+    display: grid;
+    gap: 0px;
+  }
+
+  .pub .title {
+    font-weight: 600;
+  }
+
+  .pub .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .cats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 880px) {
+    .cats {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  footer {
+    padding: calc(var(--pad) * 0.6) 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--line);
+  }
+
+  .award {
+    color: #f87171;
+    border-bottom-color: #f87171;
+  }
+
+  .award:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .career-timeline {
+    display: grid;
+    gap: 16px;
+  }
+
+  .career-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .career-period {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .career-title {
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .career-subtitle {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  @media (max-width: 640px) {
+    .wrap {
+      padding: calc(var(--pad) * 1.2) calc(var(--pad) * 0.8) calc(var(--pad) * 0.6) calc(var(--pad) * 0.8);
+    }
+
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    header > div {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+
+    .profile-image {
+      width: 60px;
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h1 .sub {
+      font-size: 0.75rem;
+    }
+
+    .career-item {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+
+    .career-period {
+      font-size: 0.85rem;
+    }
+
+    .pub .meta {
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+  }
+
+  /* --- Blog-only additions below (not present in docs/index.html) --- */
+
+  .post h2 {
+    margin-bottom: 4px;
+  }
+
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+
+  .muted {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .ad-slot {
+    margin: calc(var(--pad) * 0.6) 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--line);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  /* Article-body typography for long-form post content (headings, paragraphs, tables) */
+  .post-body h2 {
+    margin: 0 0 24px 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .post-body h3 {
+    margin: 24px 0 12px 0;
+    font-weight: 600;
+    font-size: 1.15rem;
+  }
+
+  .post-body p {
+    margin-bottom: 1.5em;
+  }
+
+  .post-body section {
+    padding: calc(var(--pad) * 1.2) 0;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .post-body section:last-of-type {
+    border-bottom: none;
+  }
+
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.95rem;
+  }
+
+  .post-body th {
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    padding: 12px 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .post-body td {
+    border-bottom: 1px dashed var(--line);
+    padding: 16px 8px;
+    vertical-align: top;
+  }
+
+  .post-body td strong {
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .post-body th, .post-body td {
+      display: block;
+      width: 100%;
+      border-bottom: none;
+      padding: 4px 0;
+    }
+
+    .post-body th {
+      display: none;
+    }
+
+    .post-body tr {
+      display: block;
+      border-bottom: 1px dashed var(--line);
+      padding: 12px 0;
+      margin-bottom: 12px;
+    }
+  }
+</style>

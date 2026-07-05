@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title_en }} — Wataoka</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  {% include site-style.html %}
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <a href="{{ '/' | relative_url }}"><img src="{{ '/wataoka2025.jpg' | relative_url }}" alt="Koki Wataoka" class="profile-image"></a>
+        <div>
+          <h1>
+            <span data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</span>
+          </h1>
+        </div>
+      </div>
+      <nav aria-label="Language">
+        <a href="#" id="lang-en" data-lang="en" data-en="EN" data-ja="EN">EN</a>
+        <span class="nowrap" style="opacity:.5">/</span>
+        <a href="#" id="lang-ja" data-lang="ja" data-en="日本語" data-ja="日本語">日本語</a>
+      </nav>
+    </header>
+
+    <article class="post">
+      <h2 data-en="{{ page.title_en }}" data-ja="{{ page.title_ja }}">{{ page.title_en }}</h2>
+      {% if page.date %}
+      <p class="muted">{{ page.date | date: "%Y-%m-%d" }}</p>
+      {% endif %}
+
+      {% include ad.html %}
+
+      <div class="post-body">
+        {{ content }}
+      </div>
+
+      {% include ad.html %}
+    </article>
+
+    <p><a href="{{ '/' | relative_url }}" data-en="&larr; Back to home" data-ja="&larr; ホームへ戻る">&larr; Back to home</a></p>
+
+    <footer>
+      <span id="y"></span> Koki Wataoka
+    </footer>
+  </div>
+
+  {% include lang-toggle.html %}
+</body>
+</html>

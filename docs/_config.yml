@@ -1,0 +1,25 @@
+title: "Koki Wataoka"
+description: "Koki Wataoka — AI Safety / LLM evaluation. Publications, talks, and contact."
+url: "https://wataoka.github.io"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+collections:
+  blog:
+    output: true
+    permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "post"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

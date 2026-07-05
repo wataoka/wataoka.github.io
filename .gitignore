@@ -3,3 +3,6 @@ __pycache__
 .sass-cache
 node_modules
 .vscode/
+docs/_site
+docs/.jekyll-cache
+docs/.sass-cache

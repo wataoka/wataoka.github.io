@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jekyll-preview",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "cd /Users/wataoka/Documents/wataoka.github.io/docs && PATH=/opt/homebrew/opt/ruby/bin:$PATH bundle exec jekyll serve --host 127.0.0.1 --port 4000"
+      ],
+      "port": 4000
+    }
+  ]
+}
