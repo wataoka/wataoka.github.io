@@ -19,7 +19,7 @@
 
 - `docs/` — 公開対象（Jekyll のソースルート）。
   - `index.html` — トップページ。front matter なし、Jekyll のレイアウトシステムの外にある静的ファイルとして扱う（今まで通り手編集）。
-  - `ai-safety-2025.html` — 講演スライド系の単発ページ。front matter なし、静的ファイルのまま。今回のブログ移行では対象外（今後もブログコレクションには含めない）。
+  - `ai-safety-2025.html` — 元は講演スライド系の単発ページだったが、`_blog/2025-12-31-ai-safety-2025.md` としてブログに移行済み。このファイル自体は旧 URL 用のリダイレクトスタブ（`<meta http-equiv="refresh">` で `/blog/ai-safety-2025/` に転送）として残している。front matter なし、静的ファイルのまま。
   - `_config.yml` / `Gemfile` — Jekyll の設定と依存 gem。
   - `_layouts/post.html` — ブログ記事用のページテンプレート。
   - `_includes/site-style.html` / `_includes/lang-toggle.html` / `_includes/ad.html` — ブログ記事が使う CSS・EN/JA トグル JS・広告枠。`index.html` の `<style>`/`<script>` の内容をコピーしたもので、`index.html` 側は変更していない（意図的な重複。`ai-safety-2025.html` が CSS を丸ごとコピーしている既存の慣習と同じ考え方）。
