@@ -1,8 +1,12 @@
 <!--
-  AD PLACEHOLDER
-  Paste the ad network snippet (e.g. Google AdSense <ins class="adsbygoogle"> block,
-  or an async <script> loader tag) here once a network is chosen.
+  Google AdSense loader script. This include is rendered twice per post
+  (top and bottom, see _layouts/post.html), so the {% unless %} guard below
+  keeps the loader script itself from being injected onto the page twice.
   This include is referenced only from _layouts/post.html — never add it to
   docs/index.html or docs/ai-safety-2025.html.
 -->
-<div class="ad-slot" data-ad-placeholder="true"></div>
+{% unless ad_script_included %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6073336016442136"
+     crossorigin="anonymous"></script>
+{% assign ad_script_included = true %}
+{% endunless %}
