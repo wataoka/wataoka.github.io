@@ -34,13 +34,13 @@
       <p class="muted">{{ page.date | date: "%Y-%m-%d" }}</p>
       {% endif %}
 
-      {% include ad.html %}
+      {% unless page.no_ads %}{% include ad.html %}{% endunless %}
 
       <div class="post-body">
         {{ content }}
       </div>
 
-      {% include ad.html %}
+      {% unless page.no_ads %}{% include ad.html %}{% endunless %}
     </article>
 
     <p><a href="{{ '/' | relative_url }}" data-en="&larr; Back to home" data-ja="&larr; ホームへ戻る">&larr; Back to home</a></p>
