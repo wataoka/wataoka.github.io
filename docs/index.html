@@ -187,6 +187,39 @@
       border: 2px solid var(--line);
     }
     
+    .icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 8px;
+      vertical-align: -4px;
+      border-bottom: none;
+    }
+    
+    .icon-link svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+    
+    .icon-link.youtube {
+      color: #ff0000;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+    
+    .icon-link.youtube:hover {
+      color: #ff4d4d;
+      transform: translateY(-1px);
+    }
+    
+    .icon-link.youtube:active {
+      transform: translateY(0);
+    }
+    
+    .hl-red {
+      color: #f87171;
+    }
+    
     .award {
       color: #f87171;
       border-bottom-color: #f87171;
@@ -388,7 +421,7 @@
             </div>
             <div class="pub">
               <div class="title">Do VLMs Share Safety Neurons Across Modalities?</div>
-              <div class="meta">Jiaxuan Li, Jiahao Zhang, Huy H. Nguyen, Pride Kavumba, <b>Koki Wataoka</b> — EMNLP 2026 Main</div>
+              <div class="meta">Jiaxuan Li, Jiahao Zhang, Huy H. Nguyen, Pride Kavumba, <b>Koki Wataoka</b> — <span class="hl-red">EMNLP 2026 Main</span></div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://arxiv.org/abs/2604.03962" target="_blank" rel="noopener">Predict, Don't React: Value-Based Safety Forecasting for LLM Streaming</a></div>
@@ -400,7 +433,7 @@
             </div>
             <div class="pub">
               <div class="title"><a href="https://aclanthology.org/2025.acl-long.342/" target="_blank" rel="noopener">MergePrint: Merge‑Resistant Fingerprints for Robust Black‑box Ownership Verification of LLMs</a></div>
-              <div class="meta">Shojiro Yamabe, Futa Kai Waseda, Tsubasa Takahashi, <b>Koki Wataoka</b> — ACL 2025 Main</div>
+              <div class="meta">Shojiro Yamabe, Futa Kai Waseda, Tsubasa Takahashi, <b>Koki Wataoka</b> — <span class="hl-red">ACL 2025 Main</span></div>
             </div>
             <div class="pub">
               <div class="title"><a href="https://arxiv.org/abs/2410.21819" target="_blank" rel="noopener">Self‑Preference Bias in LLM‑as‑a‑Judge</a></div>
@@ -473,16 +506,49 @@
       <h2 data-en="Lectures / Presentations" data-ja="講演">Lectures / Presentations</h2>
       <div class="pubs">
         <div class="pub">
+          <div class="title">
+            <a href="https://www.iwsec.org/aws/2026/" target="_blank" rel="noopener" data-en="October 2026 — AI Security Workshop (AWS) 2026 — Invited Talk" data-ja="2026年10月 AIセキュリティワークショップ (AWS) 2026 招待講演">October 2026 — AI Security Workshop (AWS) 2026 — Invited Talk</a>
+          </div>
+        </div>
+        <div class="pub">
+          <div class="title">
+            <a href="https://www.ieice.org/~dpf/?info=%e7%ac%ac22%e5%9b%9edpf%e7%a0%94%e7%a9%b6%e4%bc%9a" target="_blank" rel="noopener" data-en="October 2026 — IEICE DPF (22nd Workshop) — Invited Talk" data-ja="2026年10月 IEICE 第22回DPF研究会 招待講演">October 2026 — IEICE DPF (22nd Workshop) — Invited Talk</a>
+          </div>
+        </div>
+        <div class="pub">
+          <div class="title">
+            <a href="https://aimh20261010.peatix.com" target="_blank" rel="noopener" data-en="October 2026 — AI Mental Health Care Association — Talk" data-ja="2026年10月 AIメンタルヘルスケア協会 講演">October 2026 — AI Mental Health Care Association — Talk</a>
+            <a href="https://www.youtube.com/watch?v=XqeA2F8N2F4" target="_blank" rel="noopener" class="icon-link youtube"><svg viewBox="0 0 50 50" fill="currentColor" aria-hidden="true"><path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"/></svg>YouTube</a>
+          </div>
+        </div>
+        <div class="pub">
+          <div class="title">
+            <a href="https://www.jnsa.org/seminar/iac3/20260917/" target="_blank" rel="noopener" data-en="September 2026 — JNSA-IAC3 3rd Cyber Security Seminar — Lecture &amp; Panel Discussion" data-ja="2026年9月 JNSA-IAC3 第3回サイバーセキュリティセミナー 講演・パネルディスカッション">September 2026 — JNSA-IAC3 3rd Cyber Security Seminar — Lecture &amp; Panel Discussion</a>
+          </div>
+        </div>
+        <div class="pub">
           <div class="title" data-en="June 2026 — Waseda University, School of Fundamental Science and Engineering — Guest Lecturer, &quot;Natural Language Processing&quot; Course" data-ja="2026年6月 早稲田大学 基幹理工学部 「自然言語処理」 ゲスト講師">June 2026 — Waseda University, School of Fundamental Science and Engineering — Guest Lecturer, "Natural Language Processing" Course</div>
         </div>
         <div class="pub">
           <div class="title">
             <a href="https://anlp.jp/nlp2026/#tutorial" target="_blank" rel="noopener" data-en="March 2026 — The 32nd Annual Meeting of the Association for Natural Language Processing (NLP2026) — Tutorial Talk" data-ja="2026年3月 言語処理学会 第32回年次大会 チュートリアル講演">March 2026 — The 32nd Annual Meeting of the Association for Natural Language Processing (NLP2026) — Tutorial Talk</a>
+            <a href="https://www.youtube.com/watch?v=h4lTpqQQWZU" target="_blank" rel="noopener" class="icon-link youtube"><svg viewBox="0 0 50 50" fill="currentColor" aria-hidden="true"><path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"/></svg>YouTube</a>
           </div>
         </div>
         <div class="pub">
           <div class="title">
             <a href="https://ken.ieice.org/ken/paper/20260120fcqF/" target="_blank" rel="noopener" data-en="January 2026 — IEICE EMM — Invited Talk" data-ja="2026年1月 IEICE EMM 招待講演">January 2026 — IEICE EMM — Invited Talk</a>
+          </div>
+        </div>
+        <div class="pub">
+          <div class="title">
+            <a href="https://www.ipsj.or.jp/event/seminar/2025/program03.html" target="_blank" rel="noopener" data-en="July 2025 — IPSJ Seminar Series 2025 &quot;Next-Generation Innovation Enabled by AI&quot; (3rd/4th) — Lecture" data-ja="2025年7月 情報処理学会 連続セミナー2025「AIが拓く次世代イノベーション」第3回・第4回 講演">July 2025 — IPSJ Seminar Series 2025 "Next-Generation Innovation Enabled by AI" (3rd/4th) — Lecture</a>
+          </div>
+        </div>
+        <div class="pub">
+          <div class="title">
+            <a href="https://tech-verse.me/ja/sessions/239" target="_blank" rel="noopener" data-en="November 2022 — LINE Tech-Verse 2022 — &quot;Stress-Testing Technology for Visualizing AI Reliability&quot;" data-ja="2022年11月 LINE Tech-Verse 2022「AIの信頼性を可視化するストレステスト技術」">November 2022 — LINE Tech-Verse 2022 — "Stress-Testing Technology for Visualizing AI Reliability"</a>
+            <a href="https://www.youtube.com/watch?v=-OXc07SvSnw" target="_blank" rel="noopener" class="icon-link youtube"><svg viewBox="0 0 50 50" fill="currentColor" aria-hidden="true"><path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"/></svg>YouTube</a>
           </div>
         </div>
       </div>
