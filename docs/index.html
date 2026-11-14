@@ -24,7 +24,7 @@
         --bg: #ffffff;
         --fg: #0b0c0f;
         --muted: #5c6670;
-        --line: #e9eef2;
+        --line: #dfe4ea;
         --accent: #1a4bff;
       }
     }
@@ -63,28 +63,11 @@
       padding: calc(var(--pad) * 1.5) var(--pad) calc(var(--pad) * 0.6) var(--pad);
     }
     
-    header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 12px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: calc(var(--pad) * 0.5);
-    }
-    
     h1 {
       margin: 0;
       font-weight: 800;
       letter-spacing: -0.02em;
       line-height: 1.1;
-    }
-    
-    h1 .sub {
-      display: block;
-      font-weight: 400;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 6px;
     }
     
     nav {
@@ -179,14 +162,6 @@
       white-space: nowrap;
     }
     
-    .profile-image {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--line);
-    }
-    
     .icon-link {
       display: inline-flex;
       align-items: center;
@@ -263,31 +238,6 @@
         padding: calc(var(--pad) * 1.2) calc(var(--pad) * 0.8) calc(var(--pad) * 0.6) calc(var(--pad) * 0.8);
       }
       
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-      
-      header > div {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 12px !important;
-      }
-      
-      .profile-image {
-        width: 60px;
-        height: 60px;
-      }
-      
-      h1 {
-        font-size: 1.5rem;
-      }
-      
-      h1 .sub {
-        font-size: 0.75rem;
-      }
-      
       .career-item {
         grid-template-columns: 1fr;
         gap: 4px;
@@ -302,6 +252,157 @@
         overflow-wrap: break-word;
       }
     }
+
+    /* Top bar + profile (hero). PC: text left, photo right. Phone (<=640px): centered, round photo. */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-bottom: calc(var(--pad) * 1.2);
+    }
+    
+    .topbar .mark {
+      letter-spacing: 0.02em;
+    }
+    
+    .topnav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    
+    .topnav .lang {
+      gap: 6px;
+    }
+    
+    .chips, .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .chip {
+      display: inline-block;
+      padding: 5px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+    
+    .chip:hover {
+      border-color: var(--accent);
+    }
+    
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+    }
+    
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 36px;
+      align-items: center;
+      padding-bottom: calc(var(--pad) * 1.4);
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .hero .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin: 10px 0 6px;
+    }
+    
+    .hero .role {
+      color: var(--muted);
+      word-break: keep-all;
+    }
+    
+    .hero .rule {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 20px 0;
+    }
+    
+    .hero .tags {
+      display: none;
+    }
+    
+    .hero .lead {
+      color: var(--fg);
+      opacity: 0.85;
+      font-size: 1.05rem;
+      max-width: 64ch;
+      margin: 0;
+    }
+    
+    .hero .chips {
+      margin-top: 22px;
+    }
+    
+    .hero img {
+      width: 200px;
+      height: 240px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+    }
+    
+    @media (max-width: 640px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+      }
+      
+      .hero img {
+        order: -1;
+        justify-self: center;
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        border: 0;
+        box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px color-mix(in srgb, var(--accent) 55%, transparent);
+      }
+      
+      .hero .eyebrow, .hero .rule {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 1.9rem;
+        margin: 0 0 6px;
+      }
+      
+      .hero .tags {
+        display: flex;
+        justify-content: center;
+        margin: 18px 0;
+      }
+      
+      .hero .lead {
+        text-align: left;
+      }
+      
+      .hero .chips {
+        justify-content: center;
+      }
+    }
   </style>
   <!-- Google AdSense site-ownership verification script (loader only, no ad units are shown here) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6073336016442136"
@@ -310,39 +411,48 @@
 
 <body>
   <div class="wrap">
-    <header>
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <img src="wataoka2025.jpg" alt="Koki Wataoka" class="profile-image">
-        <div>
-          <h1>
-            <span data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</span>
-            <span class="sub" data-en="Responsible AI Team, SB Intuitions / Softbank" data-ja="Responsible AIチーム, SB Intuitions / ソフトバンク">Responsible AI Team, SB Intuitions / Softbank</span>
-          </h1>
-        </div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 20px;">
+    <div class="topbar">
+      <span class="mark">wataoka.github.io</span>
+      <div class="topnav">
         <nav aria-label="Site">
-          <a href="/blog/" data-en="Blog" data-ja="ブログはこちら">Blog</a>
+          <a href="/blog/" data-en="Blog" data-ja="ブログ">Blog</a>
         </nav>
-        <nav aria-label="Language">
+        <nav aria-label="Language" class="lang">
           <a href="#" id="lang-ja" data-lang="ja" data-en="日本語" data-ja="日本語">日本語</a>
           <span class="nowrap" style="opacity:.5">/</span>
           <a href="#" id="lang-en" data-lang="en" data-en="EN" data-ja="EN">EN</a>
         </nav>
       </div>
-    </header>
+    </div>
 
-    <section id="about">
-      <h2 data-en="About" data-ja="プロフィール">About</h2>
-
-      <p class="lead" data-lang-content="en">
+    <section id="about" class="hero">
+      <div>
+        <div class="eyebrow" data-en="AI Safety Researcher" data-ja="AIセーフティ研究者">AI Safety Researcher</div>
+        <h1 data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</h1>
+        <div class="role" data-en="Responsible AI Team, SB Intuitions / Softbank" data-ja="Responsible AIチーム, SB Intuitions / ソフトバンク">Responsible AI Team, SB Intuitions / Softbank</div>
+        <div class="rule"></div>
+        <div class="tags">
+          <span class="tag" data-en="AI Safety" data-ja="AIセーフティ">AI Safety</span>
+          <span class="tag" data-en="Red-teaming" data-ja="レッドチーミング">Red-teaming</span>
+          <span class="tag" data-en="Guardrails" data-ja="ガードレール">Guardrails</span>
+          <span class="tag" data-en="LLM / VLM Evaluation" data-ja="LLM・VLM 評価">LLM / VLM Evaluation</span>
+        </div>
+        <p class="lead" data-lang-content="en">
         I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs.
         Previously worked on fairness and privacy‑preserving computation.
         My recent work studies LLM‑as‑a‑Judge biases (verbosity / self‑preference), jailbreak attacks, and LLM fingerprinting.
       </p>
-      <p class="lead" data-lang-content="ja" style="display:none;">
+        <p class="lead" data-lang-content="ja" style="display:none;">
         SB Intuitions Responsible AIチーム リーダー / Chief Research Engineer。LLMやVLMにおける安全性評価や訓練、レッドチーミングやガードレールなどの<strong>AIセーフティ</strong>に取り組んでいます。研究分野としては、LLM-as-a-Judgeにおけるバイアス、ジェイルブレイク攻撃、LLMのフィンガープリンティング、機械学習の公平性、プライバシー保護計算などです。
       </p>
+        <div class="chips">
+          <a class="chip" href="https://scholar.google.com/citations?user=J8FuRZgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="chip" href="https://github.com/wataoka" target="_blank" rel="noopener">GitHub</a>
+          <a class="chip" href="https://x.com/wataoka_koki" target="_blank" rel="noopener">X</a>
+          <a class="chip" href="/blog/" data-en="Blog" data-ja="ブログ">Blog</a>
+        </div>
+      </div>
+      <img src="wataoka2025.jpg" alt="Koki Wataoka">
     </section>
     
     <section id="career">
