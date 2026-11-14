@@ -289,7 +289,7 @@
       gap: 6px;
     }
     
-    .chips, .tags {
+    .chips {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -320,15 +320,6 @@
       background: color-mix(in srgb, var(--accent) 14%, transparent);
     }
     
-    .tag {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      color: var(--accent);
-      background: color-mix(in srgb, var(--accent) 12%, transparent);
-    }
-    
     .hero {
       display: grid;
       grid-template-columns: 1fr 200px;
@@ -351,21 +342,12 @@
       margin: 10px 0 6px;
     }
     
-    .hero .role {
-      color: var(--muted);
-      word-break: keep-all;
-    }
-    
     .hero .rule {
       width: 48px;
       height: 3px;
       background: var(--accent);
       border-radius: 2px;
       margin: 20px 0;
-    }
-    
-    .hero .tags {
-      display: none;
     }
     
     .hero .lead {
@@ -411,13 +393,7 @@
       
       .hero h1 {
         font-size: 1.9rem;
-        margin: 8px 0 6px;
-      }
-      
-      .hero .tags {
-        display: flex;
-        justify-content: center;
-        margin: 18px 0;
+        margin: 8px 0 16px;
       }
       
       .hero .lead {
@@ -454,14 +430,7 @@
       <div>
         <div class="eyebrow" data-en="AI Safety Researcher" data-ja="AIセーフティ研究者">AI Safety Researcher</div>
         <h1 data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</h1>
-        <div class="role" data-en="Responsible AI Team, SB Intuitions / Softbank" data-ja="Responsible AIチーム, SB Intuitions / ソフトバンク">Responsible AI Team, SB Intuitions / Softbank</div>
         <div class="rule"></div>
-        <div class="tags">
-          <span class="tag" data-en="AI Safety" data-ja="AIセーフティ">AI Safety</span>
-          <span class="tag" data-en="Red-teaming" data-ja="レッドチーミング">Red-teaming</span>
-          <span class="tag" data-en="Guardrails" data-ja="ガードレール">Guardrails</span>
-          <span class="tag" data-en="LLM / VLM Evaluation" data-ja="LLM・VLM 評価">LLM / VLM Evaluation</span>
-        </div>
         <p class="lead" data-lang-content="en">
         I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs.
         Previously worked on fairness and privacy‑preserving computation.
