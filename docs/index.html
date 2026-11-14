@@ -371,9 +371,9 @@
     .avatar {
       position: relative;
       display: block;
-      padding: 5px;
+      padding: 7px;
       border: 0;
-      border-radius: 21px;
+      border-radius: 23px;
       overflow: hidden;
       background: linear-gradient(45deg, #84a6ff, #a78bfa, #f0abfc, #a78bfa, #84a6ff);
       background-size: 300% 300%;
@@ -389,7 +389,29 @@
       inset: 0;
       background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.9) 50%, transparent 58%);
       background-size: 300% 100%;
-      animation: ring-shine 3s ease-in-out infinite;
+      animation: ring-shine 1.8s ease-in-out infinite;
+    }
+    
+    /* Glitter: small white dots that drift along the ring and twinkle */
+    .avatar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 1.2px, transparent 1.8px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.75) 0 0.8px, transparent 1.4px);
+      background-size: 17px 23px, 11px 13px;
+      animation: ring-glitter 3s linear infinite, ring-twinkle 0.8s ease-in-out infinite alternate;
+    }
+    
+    @keyframes ring-glitter {
+      from { background-position: 0 0, 5px 7px; }
+      to { background-position: 34px 46px, -17px 33px; }
+    }
+    
+    @keyframes ring-twinkle {
+      from { opacity: 1; }
+      to { opacity: 0.35; }
     }
     
     @keyframes ring-flow {
@@ -399,7 +421,7 @@
     
     @keyframes ring-shine {
       0% { background-position: 100% 0; }
-      55%, 100% { background-position: 0% 0; }
+      70%, 100% { background-position: 0% 0; }
     }
     
     .avatar:hover {
@@ -420,18 +442,19 @@
       animation: none;
     }
     
-    .avatar.seen::before {
+    .avatar.seen::before, .avatar.seen::after {
       display: none;
     }
     
     @media (prefers-reduced-motion: reduce) {
-      .avatar, .avatar::before {
+      .avatar, .avatar::before, .avatar::after {
         animation: none;
       }
     }
     
     .avatar img {
       position: relative;
+      z-index: 1;
       display: block;
       width: 200px;
       height: 240px;
@@ -450,7 +473,7 @@
       .hero .avatar {
         order: -1;
         justify-self: center;
-        padding: 4px;
+        padding: 6px;
         border-radius: 50%;
       }
       
