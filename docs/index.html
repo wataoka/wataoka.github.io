@@ -367,15 +367,39 @@
     }
     
     /* Profile photo with an Instagram-story-like ring. Tap to open highlights. */
+    /* The ring colors slowly flow, and a white shine sweeps over it now and then. */
     .avatar {
+      position: relative;
       display: block;
       padding: 5px;
       border: 0;
       border-radius: 21px;
-      background: linear-gradient(45deg, #67e8f9, #84a6ff, #6366f1);
+      overflow: hidden;
+      background: linear-gradient(45deg, #84a6ff, #a78bfa, #f0abfc, #a78bfa, #84a6ff);
+      background-size: 300% 300%;
+      animation: ring-flow 5s ease-in-out infinite alternate;
       cursor: pointer;
       line-height: 0;
       transition: transform 0.2s ease;
+    }
+    
+    .avatar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.9) 50%, transparent 58%);
+      background-size: 300% 100%;
+      animation: ring-shine 3s ease-in-out infinite;
+    }
+    
+    @keyframes ring-flow {
+      from { background-position: 0% 50%; }
+      to { background-position: 100% 50%; }
+    }
+    
+    @keyframes ring-shine {
+      0% { background-position: 100% 0; }
+      55%, 100% { background-position: 0% 0; }
     }
     
     .avatar:hover {
@@ -393,9 +417,21 @@
     
     .avatar.seen {
       background: color-mix(in srgb, var(--fg) 25%, transparent);
+      animation: none;
+    }
+    
+    .avatar.seen::before {
+      display: none;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      .avatar, .avatar::before {
+        animation: none;
+      }
     }
     
     .avatar img {
+      position: relative;
       display: block;
       width: 200px;
       height: 240px;
