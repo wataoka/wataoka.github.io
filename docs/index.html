@@ -358,6 +358,10 @@
       margin: 0;
     }
     
+    .hero .lead + .lead {
+      margin-top: 12px;
+    }
+    
     .hero .chips {
       margin-top: 22px;
     }
@@ -718,14 +722,14 @@
         <div class="eyebrow" data-en="AI Safety Researcher" data-ja="AIセーフティ研究者">AI Safety Researcher</div>
         <h1 data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</h1>
         <div class="rule"></div>
-        <p class="lead" data-lang-content="en">
-        I lead the Responsible AI Team at SB Intuitions, working on <strong>AI Safety</strong>, especially red-teaming and guardrails for LLMs and VLMs.
-        Previously worked on fairness and privacy‑preserving computation.
-        My recent work studies LLM‑as‑a‑Judge biases (verbosity / self‑preference), jailbreak attacks, and LLM fingerprinting.
-      </p>
-        <p class="lead" data-lang-content="ja" style="display:none;">
-        SB Intuitions Responsible AIチーム リーダー / Chief Research Engineer。LLMやVLMにおける安全性評価や訓練、レッドチーミングやガードレールなどの<strong>AIセーフティ</strong>に取り組んでいます。研究分野としては、LLM-as-a-Judgeにおけるバイアス、ジェイルブレイク攻撃、LLMのフィンガープリンティング、機械学習の公平性、プライバシー保護計算などです。
-      </p>
+        <div data-lang-content="en">
+          <p class="lead">I am a Chief Research Engineer at SB Intuitions, where I lead the Responsible AI Team and drive research initiatives to advance the safety and trustworthiness of foundation models.</p>
+          <p class="lead">My research focuses on AI safety, including red teaming, safety evaluation, alignment, and guardrails for LLMs and VLMs. Through my work, I seek to translate advances in AI safety research into practical methods for developing safer and more reliable AI systems.</p>
+        </div>
+        <div data-lang-content="ja" style="display:none;">
+          <p class="lead">SB Intuitions株式会社にてChief Research EngineerとしてResponsible AIチームを率い、基盤モデルの安全性と信頼性の向上に向けた研究開発を主導しています。</p>
+          <p class="lead">LLMやVLMを対象としたレッドチーミング、安全性評価、アライメント、ガードレールを中心に研究を進めています。AI Safetyの学術的な研究成果を実用的な技術へと発展させ、より安全で信頼性の高いAIシステムの開発に貢献することを目指しています。</p>
+        </div>
         <div class="chips">
           <a class="chip" href="https://scholar.google.com/citations?user=J8FuRZgAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg><span><span class="hide-sm">Google </span>Scholar</span></a>
           <a class="chip" href="https://github.com/wataoka" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
