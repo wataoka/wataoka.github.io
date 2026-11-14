@@ -366,12 +366,42 @@
       margin: 14px 0 6px;
     }
     
-    .hero img {
+    /* Profile photo with an Instagram-story-like ring. Tap to open highlights. */
+    .avatar {
+      display: block;
+      padding: 3px;
+      border: 0;
+      border-radius: 19px;
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      cursor: pointer;
+      line-height: 0;
+      transition: transform 0.2s ease;
+    }
+    
+    .avatar:hover {
+      transform: scale(1.03);
+    }
+    
+    .avatar:active {
+      transform: scale(0.97);
+    }
+    
+    .avatar:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    
+    .avatar.seen {
+      background: color-mix(in srgb, var(--fg) 25%, transparent);
+    }
+    
+    .avatar img {
+      display: block;
       width: 200px;
       height: 240px;
       border-radius: 16px;
       object-fit: cover;
-      border: 1px solid var(--line);
+      border: 3px solid var(--bg);
     }
     
     @media (max-width: 640px) {
@@ -381,14 +411,16 @@
         text-align: center;
       }
       
-      .hero img {
+      .hero .avatar {
         order: -1;
         justify-self: center;
+        border-radius: 50%;
+      }
+      
+      .hero .avatar img {
         width: 112px;
         height: 112px;
         border-radius: 50%;
-        border: 0;
-        box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px color-mix(in srgb, var(--accent) 55%, transparent);
       }
       
       .hero .rule {
@@ -417,6 +449,189 @@
         padding: 6px 10px;
         gap: 5px;
         font-size: 0.8rem;
+      }
+    }
+
+    /* Highlights viewer (Instagram-story-like). Always dark, whatever the theme. */
+    .story {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.92);
+      animation: story-in 0.2s ease;
+    }
+    
+    .story[hidden] {
+      display: none;
+    }
+    
+    @keyframes story-in {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: none; }
+    }
+    
+    .story-frame {
+      position: relative;
+      height: min(92vh, 860px);
+      aspect-ratio: 9 / 16;
+      max-width: 100vw;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+    
+    .story-bg {
+      position: absolute;
+      inset: -40px;
+      background-size: cover;
+      background-position: center;
+      filter: blur(28px) brightness(0.45);
+    }
+    
+    .story-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+    }
+    
+    .story-top {
+      position: absolute;
+      inset: 0 0 auto 0;
+      padding: 12px 12px 28px;
+      background: linear-gradient(rgba(0, 0, 0, 0.55), transparent);
+      z-index: 2;
+    }
+    
+    .story-bars {
+      display: flex;
+      gap: 4px;
+    }
+    
+    .story-bars span {
+      flex: 1;
+      height: 2.5px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.35);
+      overflow: hidden;
+    }
+    
+    .story-bars i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: #fff;
+    }
+    
+    .story-bars .done i {
+      width: 100%;
+    }
+    
+    .story-bars .active i {
+      animation: story-fill var(--story-dur, 6s) linear forwards;
+    }
+    
+    .story.paused .story-bars .active i {
+      animation-play-state: paused;
+    }
+    
+    @keyframes story-fill {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    .story-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    
+    .story-head img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .story-close {
+      margin-left: auto;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      background: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .story-close svg {
+      width: 22px;
+      height: 22px;
+    }
+    
+    .story-bottom {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 48px 20px 28px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      z-index: 2;
+      display: grid;
+      justify-items: start;
+      gap: 14px;
+    }
+    
+    .story-caption {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.5;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    }
+    
+    .story-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    
+    .story-link[hidden] {
+      display: none;
+    }
+    
+    .story-link:hover {
+      color: #111;
+      background: #e9eef2;
+    }
+    
+    .story-link::after {
+      color: inherit !important;
+    }
+    
+    @media (max-width: 640px) {
+      .story-frame {
+        height: 100vh;
+        height: 100dvh;
+        width: 100vw;
+        aspect-ratio: auto;
+        border-radius: 0;
       }
     }
   </style>
@@ -458,7 +673,9 @@
           <a class="chip" href="/blog/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg><span data-en="Blog" data-ja="ブログ">Blog</span></a>
         </div>
       </div>
-      <img src="wataoka2025.jpg" alt="Koki Wataoka">
+      <button type="button" class="avatar" id="story-open" aria-label="Highlights">
+        <img src="wataoka2025.jpg" alt="Koki Wataoka">
+      </button>
     </section>
     
     <section id="career">
@@ -709,7 +926,27 @@
       <span id="y"></span> Koki Wataoka
     </footer>
   </div>
-  
+
+  <!-- Highlights viewer. Stories are listed in STORIES in the script below. -->
+  <div class="story" id="story" role="dialog" aria-modal="true" aria-label="Highlights" hidden>
+    <div class="story-frame" id="story-frame">
+      <div class="story-bg" id="story-bg"></div>
+      <img class="story-img" id="story-img" alt="">
+      <div class="story-top">
+        <div class="story-bars" id="story-bars"></div>
+        <div class="story-head">
+          <img src="wataoka2025.jpg" alt="">
+          <span data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</span>
+          <button type="button" class="story-close" id="story-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        </div>
+      </div>
+      <div class="story-bottom">
+        <p class="story-caption" id="story-caption"></p>
+        <a class="story-link" id="story-link" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
@@ -765,6 +1002,114 @@
             setLang(lang);
           });
         });
+      });
+    })();
+  </script>
+  <script>
+    // Highlights (Instagram-story-like). To add one: put the image in docs/ and add an entry here (newest first).
+    const STORIES = [
+      {
+        img: 'story-tv-tokyo-ai-security.jpg',
+        url: 'https://youtu.be/fGUIXqoChqE',
+        ja: { caption: '「総務省AIセキュリティ分科会」についてテレビ東京で放映されました！', link: 'YouTubeで見る' },
+        en: { caption: 'Featured on TV Tokyo news about the MIC AI Security Subcommittee!', link: 'Watch on YouTube' }
+      },
+      {
+        img: 'story-nlp2026-tutorial.jpg',
+        url: 'https://www.anlp.jp/nlp2026/#tutorial',
+        ja: { caption: '言語処理学会にてチュートリアル講演しました！', link: '詳しく見る' },
+        en: { caption: 'Gave a tutorial talk at NLP2026, the annual meeting of the Association for Natural Language Processing!', link: 'Learn more' }
+      }
+    ];
+
+    (function(){
+      const DURATION = 6000;
+      const $ = id => document.getElementById(id);
+      const viewer = $('story'), frame = $('story-frame'), bars = $('story-bars');
+      const img = $('story-img'), bg = $('story-bg'), caption = $('story-caption'), link = $('story-link');
+      const opener = $('story-open');
+      const seenKey = STORIES.map(s => s.img).join('|');
+      let index = 0;
+
+      try { if (localStorage.getItem('storySeen') === seenKey) opener.classList.add('seen'); } catch {}
+      frame.style.setProperty('--story-dur', DURATION + 'ms');
+
+      bars.innerHTML = STORIES.map(() => '<span><i></i></span>').join('');
+      STORIES.forEach(s => { new Image().src = s.img; });
+
+      function show(i) {
+        index = i;
+        const s = STORIES[i];
+        const t = s[document.documentElement.lang === 'ja' ? 'ja' : 'en'];
+        [...bars.children].forEach((b, j) => {
+          b.className = j < i ? 'done' : '';
+        });
+        bg.style.backgroundImage = `url("${s.img}")`;
+        caption.textContent = t.caption;
+        link.textContent = t.link;
+        link.href = s.url;
+        link.hidden = !s.url;
+        img.onload = () => {
+          const bar = bars.children[i];
+          void bar.offsetWidth; // restart the fill animation
+          bar.className = 'active';
+        };
+        img.src = s.img;
+        if (img.complete) img.onload();
+      }
+
+      function next() { index < STORIES.length - 1 ? show(index + 1) : close(); }
+      function prev() { show(Math.max(0, index - 1)); }
+
+      function open() {
+        viewer.hidden = false;
+        viewer.classList.remove('paused');
+        document.documentElement.style.overflow = document.body.style.overflow = 'hidden';
+        show(0);
+        $('story-close').focus();
+        opener.classList.add('seen');
+        try { localStorage.setItem('storySeen', seenKey); } catch {}
+      }
+
+      function close() {
+        viewer.hidden = true;
+        img.onload = null;
+        document.documentElement.style.overflow = document.body.style.overflow = '';
+        opener.focus();
+      }
+
+      bars.addEventListener('animationend', next);
+      opener.addEventListener('click', open);
+      $('story-close').addEventListener('click', close);
+      viewer.addEventListener('click', e => { if (e.target === viewer) close(); });
+
+      // Tap left/right side to go back/forward, hold to pause, swipe down to close.
+      let downAt = 0, downY = 0;
+      frame.addEventListener('pointerdown', e => {
+        if (e.target.closest('a, button')) return;
+        downAt = Date.now(); downY = e.clientY;
+        viewer.classList.add('paused');
+      });
+      frame.addEventListener('pointerup', e => {
+        if (!downAt) return;
+        const held = Date.now() - downAt, dy = e.clientY - downY;
+        downAt = 0;
+        viewer.classList.remove('paused');
+        if (dy > 80) return close();
+        if (held > 250) return;
+        const r = frame.getBoundingClientRect();
+        (e.clientX - r.left < r.width / 3) ? prev() : next();
+      });
+      frame.addEventListener('pointercancel', () => { downAt = 0; viewer.classList.remove('paused'); });
+
+      document.addEventListener('keydown', e => {
+        if (viewer.hidden) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowRight') next();
+        else if (e.key === 'ArrowLeft') prev();
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (!viewer.hidden) viewer.classList.toggle('paused', document.hidden);
       });
     })();
   </script>
