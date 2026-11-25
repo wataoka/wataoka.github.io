@@ -44,7 +44,7 @@
 
 - 単一ファイルに HTML / CSS / JS が同居。`index.html` 自体はこの方針を維持し、front matter や Jekyll のレイアウトは使わない。
 - カラーは `:root` の CSS 変数で定義され、`@media (prefers-color-scheme: light)` でライトテーマに切り替わる。新しい色は変数を経由する。
-- セクション構成: `#about` → `#career` → `#books` → `#appointments` → `#publications` → `#lectures` → `#patents` → `#contact` → `<footer>`。
+- セクション構成: `#about` → `#career` → `#books` → `#appointments` → `#publications`（国際）→ `#publications-domestic`（国内）→ `#lectures` → `#patents` → `#contact` → `<footer>`。
 - フォントは Google Fonts の Inter。
 
 ### 多言語対応（EN / JA）
