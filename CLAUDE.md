@@ -22,10 +22,10 @@
   - `ai-safety-2025.html` — 元は講演スライド系の単発ページだったが、`_blog/2025-12-31-ai-safety-2025.md` としてブログに移行済み。このファイル自体は旧 URL 用のリダイレクトスタブ（`<meta http-equiv="refresh">` で `/blog/ai-safety-2025/` に転送）として残している。front matter なし、静的ファイルのまま。
   - `_config.yml` / `Gemfile` — Jekyll の設定と依存 gem。
   - `_layouts/post.html` — ブログ記事用のページテンプレート。
-  - `_includes/site-style.html` / `_includes/lang-toggle.html` / `_includes/ad.html` — ブログ記事が使う CSS・EN/JA トグル JS・広告枠。`index.html` の `<style>`/`<script>` の内容をコピーしたもので、`index.html` 側は変更していない（意図的な重複。`ai-safety-2025.html` が CSS を丸ごとコピーしている既存の慣習と同じ考え方）。
+  - `_includes/site-style.html` / `_includes/lang-toggle.html` / `_includes/ad.html` — ブログ記事が使う CSS・EN/JA トグル JS・広告枠。`site-style.html` の前半（色・リンク・上部バー・ボタン・フッター）は `index.html` の `<style>` から必要な部分だけをコピーしたもので、トップページと同じ見た目にしている（意図的な重複）。**`index.html` でこれらの共通部分を変えたときは、`site-style.html` 側も合わせて直す**。後半はブログ専用（記事ヘッダー、記事一覧、本文の見出し・表など）。
   - `_blog/` — ブログ記事の Markdown ファイルを置くコレクション。`/blog/:title/` という URL になる。
   - `blog/index.html` — ブログ記事一覧ページ（`/blog/`）。
-  - 画像（`wataoka2025.jpg` 等）、`favicon.ico`、SNS アイコン SVG も同じ階層。
+  - 画像（`wataoka2025.jpg`、ハイライト用の `story-*.jpg` 等）と `favicon.ico` も同じ階層。SNS などのアイコンは SVG ファイルではなく `index.html` の中に直接書いている。
 - `README.md` — リポジトリ全体の説明。サイトのレイアウト変更時に整合性が崩れたら更新する。
 
 過去バージョンの `v1/` / `v2/` / `public/`、および Markdown 下書き（`docs/index-en.md` / `docs/index-ja.md` / `docs/ai-safety-2025.md`）は整理済みでリポジトリには存在しない。git history からは参照可能だが、現行運用では参照しない。

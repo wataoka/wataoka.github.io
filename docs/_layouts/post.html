@@ -12,27 +12,28 @@
 
 <body>
   <div class="wrap">
-    <header>
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <a href="{{ '/' | relative_url }}"><img src="{{ '/wataoka2025.jpg' | relative_url }}" alt="Koki Wataoka" class="profile-image"></a>
-        <div>
-          <h1>
-            <span data-en="Koki Wataoka" data-ja="綿岡晃輝">Koki Wataoka</span>
-          </h1>
-        </div>
+    <div class="topbar">
+      <a class="mark" href="{{ '/' | relative_url }}">wataoka.github.io</a>
+      <div class="topnav">
+        <nav aria-label="Language" class="lang">
+          <a href="#" id="lang-ja" data-lang="ja" data-en="日本語" data-ja="日本語">日本語</a>
+          <span class="nowrap" style="opacity:.5">/</span>
+          <a href="#" id="lang-en" data-lang="en" data-en="EN" data-ja="EN">EN</a>
+        </nav>
       </div>
-      <nav aria-label="Language">
-        <a href="#" id="lang-en" data-lang="en" data-en="EN" data-ja="EN">EN</a>
-        <span class="nowrap" style="opacity:.5">/</span>
-        <a href="#" id="lang-ja" data-lang="ja" data-en="日本語" data-ja="日本語">日本語</a>
-      </nav>
-    </header>
+    </div>
 
     <article class="post">
-      <h2 data-en="{{ page.title_en }}" data-ja="{{ page.title_ja }}">{{ page.title_en }}</h2>
-      {% if page.date %}
-      <p class="muted">{{ page.date | date: "%Y-%m-%d" }}</p>
-      {% endif %}
+      <header class="post-head">
+        {% if page.date %}
+        <a class="eyebrow" href="{{ '/blog/' | relative_url }}" data-en="Blog" data-ja="ブログ">Blog</a>
+        {% endif %}
+        <h1 data-en="{{ page.title_en }}" data-ja="{{ page.title_ja }}">{{ page.title_en }}</h1>
+        {% if page.date %}
+        <p class="post-date">{{ page.date | date: "%Y-%m-%d" }}</p>
+        {% endif %}
+        <div class="rule"></div>
+      </header>
 
       {% unless page.no_ads %}{% include ad.html %}{% endunless %}
 
@@ -43,7 +44,12 @@
       {% unless page.no_ads %}{% include ad.html %}{% endunless %}
     </article>
 
-    <p><a href="{{ '/' | relative_url }}" data-en="&larr; Back to home" data-ja="&larr; ホームへ戻る">&larr; Back to home</a></p>
+    <div class="chips post-nav">
+      {% if page.date %}
+      <a class="chip" href="{{ '/blog/' | relative_url }}" data-en="&larr; All posts" data-ja="&larr; ブログ一覧">&larr; All posts</a>
+      {% endif %}
+      <a class="chip" href="{{ '/' | relative_url }}" data-en="&larr; Home" data-ja="&larr; ホーム">&larr; Home</a>
+    </div>
 
     <footer>
       <span id="y"></span> Koki Wataoka

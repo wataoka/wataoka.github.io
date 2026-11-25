@@ -10,14 +10,14 @@ no_ads: true
 <div data-lang-content="en">
 <ul class="post-list">
 {% for post in sorted_posts %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title_en }}</a> <span class="muted">— {{ post.date | date: "%Y-%m-%d" }}</span></li>
+  <li><a href="{{ post.url | relative_url }}"><span class="title">{{ post.title_en }}</span><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span></a></li>
 {% endfor %}
 </ul>
 </div>
 <div data-lang-content="ja" style="display:none;">
 <ul class="post-list">
 {% for post in sorted_posts %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title_ja }}</a> <span class="muted">— {{ post.date | date: "%Y-%m-%d" }}</span></li>
+  <li><a href="{{ post.url | relative_url }}"><span class="title">{{ post.title_ja }}</span><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span></a></li>
 {% endfor %}
 </ul>
 </div>
